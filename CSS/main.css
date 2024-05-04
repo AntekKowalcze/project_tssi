@@ -70,13 +70,13 @@ flex-direction: column;
     margin-right: 0.35em;
     margin-top: .5em;
 
-    padding-top: 10vw;
+    padding-top: 9%;
   
   }
 
 
   .linkboxes a {
-
+    padding-top: 0;
     position: relative;
     bottom: 5px;
     text-decoration: none;
@@ -85,24 +85,35 @@ flex-direction: column;
     font-size: 10vw;
     text-align: center;
     margin-bottom: 0;
-    
+
 
 }
 .linkboxes p{
 
   font-size: 4vw;
   padding: 0;
-  margin: 0;
+line-height: 0.5rem;
   color:#02B7DE;
- 
+  position: sticky;
+  margin-top: clamp(0vw, 7vw, 10vw);
+  
 }
 i{
   font-style: normal;
 }
 .big{
-  font-size: 8vw;
-  font-style: normal;  
+  font-size: 7vw;
+  font-style: normal; 
+  position: relative;
+  bottom: 5vw;
+  line-height: 0.8em;
 }
+#bigger p {
+position: relative;
+bottom: 5vw;
+}
+
+
 #lower{
   margin-top: 13vw;
 }
@@ -143,8 +154,23 @@ i{
   } 
   @media (max-width:295px){
     .linkboxes a{
-      padding-top:7vw;
+      padding-top:5vw;
       font-size: 7vw;
+    
+    }
+    .big{
+      font-size: 5vw;
+    }
+  
+    .linkboxes p{
+      position: sticky;
+     margin-top: 10px;
+    }
+  }
+  @media (max-width: 150px){
+    .linkboxes p{
+      position: relative;
+      bottom: 5vw;
     }
   }
 }
