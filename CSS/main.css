@@ -1,79 +1,75 @@
 /* svgbutton background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>'); */
-*{
+* {
   font-family: Arial, Helvetica, sans-serif;
 }
-body{
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(6,4,138,1) 100%);;
-background-size:cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-display: flex;
-flex-direction: column;
-
-  
+body {
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(6, 4, 138, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
 }
-.wrapper{
+.wrapper {
   display: flex;
   width: 50%;
   margin: 0 auto;
-
 }
-.site-logo img{
+.site-logo img {
   max-width: 30%;
-
 }
-.menu-toggle{
+.menu-toggle {
   display: none;
 }
-b{
-  color: #02B7DE;
-font-weight: 900;
+b {
+  color: #02b7de;
+  font-weight: 900;
 }
 
-
-@media  (max-width: 600px){
-  header{
+@media (max-width: 600px) {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
-  aside{
+  aside {
     display: none;
   }
 
-  .header-navigation{
+  .header-navigation {
     display: none;
   }
-  h1{
+  h1 {
     display: none;
   }
-  main{
+  main {
     display: flex;
     flex-direction: row;
     place-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
   }
-  .linkboxes{
-display: flex;
-flex-direction: column;
-   
+  /* buttons */
+  .linkboxes {
+    display: flex;
+    flex-direction: column;
+
     width: 48%;
-    
+
     height: 48vw;
 
     background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>');
     background-repeat: no-repeat;
     place-items: center;
     margin-right: 0.35em;
-    margin-top: .5em;
+    margin-top: 0.5em;
 
     padding-top: 9%;
-  
   }
-
 
   .linkboxes a {
     padding-top: 0;
@@ -85,93 +81,86 @@ flex-direction: column;
     font-size: 10vw;
     text-align: center;
     margin-bottom: 0;
+  }
+  .linkboxes p {
+    font-size: 4vw;
+    padding: 0;
+    line-height: 0.5rem;
+    color: #02b7de;
+    position: sticky;
+    margin-top: clamp(0vw, 7vw, 10vw);
+  }
+  i {
+    font-style: normal;
+  }
+  .big {
+    font-size: 7vw;
+    font-style: normal;
+    position: relative;
+    bottom: 5vw;
+    line-height: 0.8em;
+  }
+  #bigger p {
+    position: relative;
+    bottom: 5vw;
+  }
 
-
-}
-.linkboxes p{
-
-  font-size: 4vw;
-  padding: 0;
-line-height: 0.5rem;
-  color:#02B7DE;
-  position: sticky;
-  margin-top: clamp(0vw, 7vw, 10vw);
-  
-}
-i{
-  font-style: normal;
-}
-.big{
-  font-size: 7vw;
-  font-style: normal; 
-  position: relative;
-  bottom: 5vw;
-  line-height: 0.8em;
-}
-#bigger p {
-position: relative;
-bottom: 5vw;
-}
-
-
-#lower{
-  margin-top: 13vw;
-}
-#bigger{
-  font-size: 6vw;
-  font-style: normal;
-}
-
-  .site-logo img{
+  #lower {
+    margin-top: 13vw;
+  }
+  #bigger {
+    font-size: 6vw;
+    font-style: normal;
+  }
+  /* buttons */
+  /* header */
+  .site-logo img {
     margin-top: 0;
     margin-left: 0.25em;
     max-width: 40%;
- 
   }
-  .menu-toggle{
- 
+  .menu-toggle {
     position: relative;
     z-index: -1;
   }
-  .menu-toggle input{
+  .menu-toggle input {
     position: absolute;
-    width:40px;
+    width: 40px;
     cursor: pointer;
-    opacity: 0; 
+    opacity: 0;
     z-index: 2;
     -webkit-touch-callout: none;
   }
-  .menu-view{
-  display: block; 
-  max-width: 20% ;
-  height: 0.25rem;
-  margin-bottom: 5px; /* create some spacing between the span elements. */
-  position: relative; /* allow for positioning changes in relation to the parent div.*/
-  background: #02B7DE;
-  border-radius: 3px;
-  z-index: 1; /* ensure that the span element is under the checkbox */
- 
-  } 
-  @media (max-width:295px){
-    .linkboxes a{
-      padding-top:5vw;
+  .menu-view {
+    display: block;
+    max-width: 20%;
+    height: 0.25rem;
+    margin-bottom: 5px; /* create some spacing between the span elements. */
+    position: relative; /* allow for positioning changes in relation to the parent div.*/
+    background: #02b7de;
+    border-radius: 3px;
+    z-index: 1; /* ensure that the span element is under the checkbox */
+  } /* header */
+  /* button media */
+  @media (max-width: 295px) {
+    .linkboxes a {
+      padding-top: 5vw;
       font-size: 7vw;
-    
     }
-    .big{
+    .big {
       font-size: 5vw;
     }
-  
-    .linkboxes p{
+
+    .linkboxes p {
       position: sticky;
-     margin-top: 10px;
+      margin-top: 10px;
     }
   }
-  @media (max-width: 150px){
-    .linkboxes p{
+  @media (max-width: 150px) {
+    .linkboxes p {
       position: relative;
       bottom: 5vw;
     }
   }
+  /* button media */
 }
-
