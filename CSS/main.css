@@ -13,6 +13,9 @@ header {
 li{
   list-style-type: none;
 }
+.hamburger{
+  display: none;
+}
 .nav-bar{
   display: flex;
   align-items: center;
@@ -142,17 +145,21 @@ footer p {
 @media (max-width: 769px) {
  
   .burger-box{
+    display: flex;
+  }
+  .burger-box p {
     display: none;
   }
   header {
-    border-bottom: #d3d3d3 max(0.1vh, 3px) solid;
+    border-bottom: #d3d3d3 max(0.1vh, 1px) solid;
     align-items: center;
     position: sticky;
     top: 0;
-    left: 0;
+    right: 0;
+    width: 100vw;
     background-color: rgba(6,4,138,1);
     z-index: 9999;
-    
+
   }
   .site-logo{
     max-width: 40vw;
@@ -161,6 +168,68 @@ footer p {
     margin-top: 0;
     margin-left: 0.25em;
     max-width: 40vw;
+  }
+  .hamburger{
+    display: block;
+    margin-bottom: 3.9vw;
+    margin-left: 40vw;
+    margin-right: 5vw;
+    
+  }
+  .bar{
+    display: block;
+    width: 9vw;
+    background-color: #02b7de;
+    height: 1vw;
+    margin-top: 1.8vw;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform:  translateY(2.8vw)rotate(45deg);
+  }.hamburger.active .bar:nth-child(3){
+    transform: translateY(-2.8vw) rotate(-45deg);
+  }
+  .header-nav-menu{
+    margin: 0;
+    position: fixed;
+    left:-100%;
+    top:24vw;
+    gap:0;
+    flex-direction: column;
+    background-color: rgba(6, 4, 138, 1);
+    width: 100vw;
+    text-align: center;
+    transition: 0.3s;
+   
+  }
+  .header-nav-item{
+    margin: 3vw 0;
+
+   display: grid;
+   width: 30%;
+   margin-inline: auto;
+   font-size: 2.6vw;
+   
+
+    
+  }
+  .header-nav-link{
+    min-height: 2vw;
+width: 30vw;
+padding: min(3vw, .8rem) 2vw;
+
+
+
+
+  
+  }
+  .header-nav-menu.active{
+    position: fixed;
+    left: 0;
   }
   /* header-fuct{
     display: flex;
@@ -219,7 +288,7 @@ footer p {
   /* links */
   .linkboxes .links {
     position: relative;
-    bottom: 5px;
+    bottom: 2vw;
     margin-top: 0;
     font-size: 10vw;
     margin-bottom: 10vw;
