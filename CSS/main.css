@@ -5,6 +5,7 @@
 
 header {
   display: flex;
+  width: 100%;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
     rgba(34, 193, 195, 1) 0%,
     rgba(6, 4, 138, 1) 100%
   );
+  background: red;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
