@@ -140,12 +140,18 @@ footer p {
 
 
 @media (max-width: 769px) {
+ 
   .burger-box{
     display: none;
   }
   header {
     border-bottom: #d3d3d3 max(0.1vh, 3px) solid;
     align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(6,4,138,1);
+    
   }
   .site-logo{
     max-width: 40vw;
@@ -190,6 +196,7 @@ footer p {
   }
   /* main display */
   main {
+    
     display: flex;
     flex-direction: row;
     place-content: center;
