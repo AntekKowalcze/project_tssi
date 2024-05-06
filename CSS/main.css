@@ -248,6 +248,8 @@ footer a:hover {
   }
   /* menu positioning + presence */
   .header-nav-menu {
+
+
     margin: 0;
     position: fixed;
     left: -100%;
@@ -258,6 +260,7 @@ footer a:hover {
     width: 100vw;
     text-align: center;
     transition: 0.3s;
+    justify-content:start ;
     
   }
   .header-nav-item {
@@ -361,7 +364,8 @@ footer a:hover {
 
   aside{
     width: 100%;
-    padding-top: 10vw;
+    padding-top:10vw;
+    padding-bottom:2vw;
     background-color: rgba(6, 4, 138, 1);
     justify-self: center;
     transition: .3s;
@@ -380,7 +384,7 @@ footer a:hover {
   .fun-fact{
     margin-inline: auto;
     border-radius: 5vw;
-    max-width: 70vw;
+    max-width: 60vw;
     padding: 1vw 3vw;
   }
   .fact-title{
@@ -450,8 +454,17 @@ footer a:hover {
     }
   }
 }
-
+@media (min-width:465px) and (max-width: 769px){
+  aside{
+    top: 80vw;
+   padding-top:0;
+  }
+  .header-nav-menu{
+    height: 60vw;
+  }
+}
 @media (min-width: 769px) and (max-width: 1200px) {
+
   /* site logo */
   .site-logo img {
     position: relative;
@@ -474,10 +487,50 @@ footer a:hover {
   header p {
     display: none;
   }
+  aside{
+    width: 100%;
+    padding-top: 10vw;
+    background-color: rgba(6, 4, 138, 1);
+    justify-content: center;
+    transition: .3s;
+    display: flex;
+    color:white;  
+    
+
+
+    justify-content: end;
+  }
+ 
+  .fun-fact{
+    margin-inline: auto;
+    border-radius: 5vw;
+    
+    padding: 1vw 3vw;
+  }
+  .fact-title{
+    font-size: 5vw;
+  }
+  .fact-id{
+  font-size: 3vw;
+  margin-top: .5em;
+  }
+  .fact-content{
+    margin-top: 1em;
+    font-size: 4vw;
+    padding-bottom: 0;
+  }
+  #refresh-image{
+    max-width: 9vw;
+    margin-top: 3vw;
+  }
+
 
 }
 
 @media (min-width: 1201px) and (max-width: 100000px) {
+  .wrapper{
+    flex-direction: row;
+  }
   header {
     margin: 0;
   }
@@ -559,20 +612,9 @@ footer a:hover {
     margin-top: 1rem;
     max-width: 3vw;
   }
-  #refresh-image.refresh-out{
-    animation: refresh-out;
-    animation-duration: .4s;
-  }
 
-  .fun-fact #refresh-image:hover{
-    animation-name: refresh-in;
-    animation-duration: .5s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-  }
-
-  
 }
+
 @keyframes refresh-in{
   from{
 transform: rotate(0deg) scale(1);
