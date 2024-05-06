@@ -31,7 +31,7 @@ li {
   align-items: center;
   justify-content: end;
   gap: 2.5vw;
-  margin-right: .8vw;
+  margin-right: 0.8vw;
   margin-top: 0;
   margin-bottom: 8%;
 }
@@ -50,7 +50,7 @@ li {
 .header-nav-link {
   padding: 0 0.3em;
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   background-color: #02b7de;
   width: 100%;
   min-height: 1.5rem;
@@ -60,7 +60,7 @@ li {
   color: white;
   text-decoration: none;
   border-radius: 1em;
-  transition: ease-in-out .2s;
+  transition: ease-in-out 0.2s;
 }
 
 .header-nav-link:hover {
@@ -70,9 +70,11 @@ li {
 body {
   /* background */
   background: rgba(6, 4, 138, 1);
-  background: linear-gradient(0deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(6, 4, 138, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(6, 4, 138, 1) 100%
+  );
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -146,7 +148,6 @@ footer a {
   color: white;
   text-decoration: none;
   border-bottom: 0px solid white;
-  
 }
 
 /* signature */
@@ -154,22 +155,19 @@ footer p {
   color: white;
   font-size: min(1.3rem, 2vw);
   padding-top: 10px;
-
-
 }
-footer a:hover{
-  transition:  .2s;
-  border-image: linear-gradient(90deg,
- 
-  rgb(122, 120, 255) 0%,
-  rgba(6, 4, 138, 1) 100%);
+footer a:hover {
+  transition: 0.2s;
+  border-image: linear-gradient(
+    90deg,
+    rgb(122, 120, 255) 0%,
+    rgba(6, 4, 138, 1) 100%
+  );
   border-image-slice: 1;
   border-width: 3px;
 }
 
-
 @media (max-width: 769px) {
-
   header {
     border-bottom: #d3d3d3 max(0.1vh, 1px) solid;
     align-items: center;
@@ -179,7 +177,6 @@ footer a:hover{
     width: 100vw;
     background-color: rgba(6, 4, 138, 1);
     z-index: 9999;
-
   }
   .site-logo {
     max-width: 40vw;
@@ -203,7 +200,6 @@ footer a:hover{
     margin-bottom: 3.9vw;
     margin-left: 40vw;
     margin-right: 5vw;
-
   }
   /* hamburger icon + transition */
   .bar {
@@ -221,13 +217,13 @@ footer a:hover{
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(2.8vw)rotate(45deg);
+    transform: translateY(2.8vw) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-2.8vw) rotate(-45deg);
   }
-/* menu positioning + presence */
+  /* menu positioning + presence */
   .header-nav-menu {
     margin: 0;
     position: fixed;
@@ -250,7 +246,7 @@ footer a:hover{
   .header-nav-link {
     min-height: 2vw;
     width: 30vw;
-    padding: min(3vw, .8rem) 2vw;
+    padding: min(3vw, 0.8rem) 2vw;
   }
 
   .header-nav-menu.active {
@@ -296,7 +292,6 @@ footer a:hover{
 
   /* main display */
   main {
-
     display: flex;
     flex-direction: row;
     place-content: center;
@@ -379,7 +374,9 @@ footer a:hover{
   footer a {
     font-size: 6vw;
   }
-
+  footer a:hover {
+    border-bottom: none;
+  }
   /* signature */
   footer p {
     font-size: 6vw;
@@ -421,10 +418,9 @@ footer a:hover{
     display: none;
   }
 
-  p {
+  header p {
     display: none;
   }
-
   /* .fun-fact{
     display: flex;
     height: 20vw;
@@ -445,29 +441,26 @@ footer a:hover{
   }
   /* logo  */
   .site-logo {
-
     margin-left: 3rem;
     position: relative;
     bottom: 1.7vh;
   }
   .logo {
-
     width: 20vw;
     max-width: 20rem;
     aspect-ratio: 5/3;
     margin: 0;
   }
-/* hiding elements */
+  /* hiding elements */
   #header-fact {
     display: none;
   }
-/* header navigation and h1 */
+  /* header navigation and h1 */
   .burger-box {
     display: block;
     margin-inline: auto;
     position: relative;
     bottom: 1rem;
-
   }
 
   h1 {
@@ -486,7 +479,6 @@ footer a:hover{
 
   .header-nav-link {
     height: 1.8rem;
-    padding-top: .8rem;
-
+    padding-top: 0.8rem;
   }
 }
