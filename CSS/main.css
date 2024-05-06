@@ -454,6 +454,7 @@ footer a:hover {
     }
   }
 }
+/* fixing funfuct */
 @media (min-width:465px) and (max-width: 769px){
   aside{
     top: 80vw;
