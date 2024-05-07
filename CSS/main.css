@@ -399,6 +399,15 @@ footer a:hover {
     max-width: 9vw;
     margin-top: 3vw;
   }
+  .mobile-clicked{
+    animation: mobile-refresh-animation .5s ease-in-out ;
+  }
+  .mouse-entered{
+    animation: none;
+  }
+  .mouse-removed{
+    animation: none;
+  }
  
 
 
@@ -761,6 +770,15 @@ footer a:hover {
   }
   to{
     transform: scale(1) rotate(360deg);
+  }
+  
+}
+@keyframes mobile-refresh-animation {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
   }
   
 }

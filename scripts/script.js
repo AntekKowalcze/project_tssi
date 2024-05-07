@@ -30,17 +30,22 @@ refreshButton.addEventListener("mouseenter", () => {
     // refreshButton.classList.remove("mouse-entered");
 
     console.log("get into CLICKED");
-
+ 
     refreshButton.classList.add("mouse-clicked");
+    refreshButton.classList.add("mobile-clicked");
 
     setTimeout(() => {
 
       refreshButton.classList.remove("mouse-clicked")
 
     refreshButton.classList.remove("mouse-entered")
-
+    refreshButton.classList.remove("mobile-clicked");
     },500);
 
+
+ 
+   
+  
     refreshButton.addEventListener("mouseleave", () =>{
 
       if(!clickFlag && !refreshButton.classList.contains("mouse-clicked") && refreshButton.classList.length != 0){
