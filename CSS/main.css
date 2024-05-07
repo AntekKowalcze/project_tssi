@@ -1,6 +1,16 @@
 /* svgbutton background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>'); */
+@font-face {
+  font-family: audiowide;
+  src: url(../fonts/Audiowide/Audiowide.ttf);
+}
+@font-face {
+  font-family: play;
+  src: url(../fonts/Play/Play-Regular.ttf);
+  src: url(../fonts/Play/Play-Bold.ttf);
+}
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: play;
 }
 
 header {
@@ -49,7 +59,7 @@ li {
 }
 .header-nav-link {
   padding: 0 0.3em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: play;
   padding-top: 0.5rem;
   background-color: #02b7de;
   width: 100%;
@@ -130,6 +140,7 @@ hr {
 aside{
   display: flex;
   color:white;  
+  font-family: play;
 }
 .fun-fact{
   display: block;
@@ -151,7 +162,7 @@ aside{
 }
 
 footer {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: audiowide;
   text-align: center;
   font-size: min(1.5rem, 2vw);
 }
@@ -415,7 +426,7 @@ footer a:hover {
   }
 
   footer {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: audiowide;
     text-align: center;
   }
 
@@ -476,7 +487,7 @@ footer a:hover {
     height: 65%;
   }
 
- 
+
   /* hiding non used on this width elements */
   h1 {
     display: none;
@@ -491,7 +502,6 @@ footer a:hover {
   }
   aside{
     justify-content: center;
-    transition: .3s;
     display: flex;
     color:white;  
     justify-content: end;
@@ -536,8 +546,7 @@ place-items: center;
     place-items: center;
     margin-bottom: 5vw;
     padding-top: 5%;
-    
-   
+    transition: ease-in-out .2s;
   }
   /* HTML/CSS tag */
   b {
@@ -547,7 +556,6 @@ place-items: center;
     justify-content: flex-end;
     color: #02b7de;
     height: 20%;
-    --b-heght: 100%;
     
   }
   
@@ -562,8 +570,18 @@ place-items: center;
    width: 100%;
    height: 100%;
    font-size: 3vw;
+   transition: ease-in-out .2s ;
+
   }
-  
+  .linkboxes:hover{
+    transform: scale(1.05);
+   
+  }
+.linkboxes .links:active{
+  transform: scale(.95);
+  transition: .1s ease-in;
+}
+
   .linkboxes .hardness-tag {
     color: #02b7de;
     font-size: 2vw;
@@ -579,7 +597,7 @@ height: fit-content;
  height: inherit;
       }
       #bigger{
-        font-size: 2.7vw;
+        font-size: 2.5vw;
       }
 
 }
@@ -587,7 +605,7 @@ height: fit-content;
 @media (min-width: 1201px) and (max-width: 100000px) {
 
   header {
-    margin: 0;
+    margin-inline: auto;
   }
   /* logo  */
   .site-logo {
@@ -601,23 +619,21 @@ height: fit-content;
     aspect-ratio: 5/3;
     margin: 0;
   }
-  /* hiding elements */
-  #header-fact {
-    display: none;
-  }
+
   /* header navigation and h1 */
   .burger-box {
     display: block;
     margin-inline: auto;
     position: relative;
     bottom: 1rem;
+  
   }
 
   h1 {
     margin-top: min(2.5rem, 1.7vh);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: audiowide;
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: fit-content;
   }
 
@@ -636,9 +652,22 @@ height: fit-content;
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
+  main{
+ 
+    margin-left: clamp(15vw, 12vw, 1vw);
+    display: grid;
+    grid-template: repeat(4,4fr)/repeat(4,4fr);
+    place-items: center;
+    position: relative;
+    right: 5vw;
+    gap: 2vw;
+    margin-left: max(15vw, 12.7rem);
+    
+      } 
   aside{
     display: flex;
     color:white;  
+    
   }
   .fun-fact{
     min-width: 15vw;
@@ -672,9 +701,81 @@ height: fit-content;
     margin-top: 1rem;
     max-width: 3vw;
   }
+  .content-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
+.linkboxes {
+  display: flex;
+  flex-direction: column;
+ width: 12vw;
+  max-width: 15rem;
+  aspect-ratio: 1;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>');
+  background-repeat: no-repeat;
+  place-items: center;
+  padding-top: 5%;
+  transition: ease-in-out .2s;
+
+
+  
+}
+/* HTML/CSS tag */
+b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: #02b7de;
+  height: 20%;
+  
+  
 }
 
+.linkboxes .links {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+ width: 100%;
+ height: 100%;
+ font-size: min(2vw, 2.5rem);
+ transition: ease-in-out .2s ;
+
+}
+.linkboxes:hover{
+  transform: scale(1.05);
+ 
+}
+.linkboxes .links:active{
+transform: scale(.95);
+transition: .1s ease-in;
+}
+
+.linkboxes .hardness-tag {
+  color: #02b7de;
+  font-size: min(1vw, 1.5rem);
+  position:relative;
+margin-top: min(3vw,1em);
+ 
+}
+
+.big{
+height: fit-content;
+}
+.big b{
+height: inherit;
+    }
+    #bigger{
+      font-size: min(1.5vw, 2rem);
+    }
+
+  
+  }
 @keyframes refresh-in{
   from{
 transform: rotate(0deg) scale(1);
