@@ -403,13 +403,13 @@ footer a:hover {
     max-width: 9vw;
     margin-top: 3vw;
   }
-  #refresh-image.refresh-out {
+  /* #refresh-image.refresh-out {
     animation: none;
   }
 
   .fun-fact #refresh-image:hover {
     animation: none;
-  }
+  } */
 
   /* footer */
   /* footer separator */
