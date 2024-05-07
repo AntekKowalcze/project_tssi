@@ -147,22 +147,15 @@ aside {
   height: fit-content;
   text-align: center;
 }
-
-#refresh-image.clicked{
-  animation: after-click-refresh .5s ease-out;
+.mouse-entered{
+  animation: mouse-entered-refresh .5s ease-in forwards ;
 }
-#refresh-image.refresh-out {
-  animation: refresh-out;
-  animation-duration: 0.4s;
+.mouse-removed{
+  animation: mouse-removed-refresh .5s ease-in ;
 }
-
-.fun-fact #refresh-image:hover {
-  animation-name: refresh-in;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
+.mouse-clicked{
+animation: mouse-clicked .5s ease-in;
 }
-
 footer {
   font-family: audiowide;
   text-align: center;
@@ -408,15 +401,6 @@ footer a:hover {
   }
  
 
-  .fun-fact #refresh-image:active {
-    animation: mobile-refresh .7s ease-out;
-  } 
-.fun-fact#refresh-image.refresh-out{
-  animation: none;
-}
-fun-fact:hover{
-  animation: none;
-}
 
   /* footer */
   /* footer separator */
@@ -753,38 +737,30 @@ fun-fact:hover{
     font-size: min(1.5vw, 2rem);
   }
 }
-@keyframes refresh-in {
-  from {
-    transform: rotate(0deg) scale(1);
+@keyframes mouse-entered-refresh {
+  from{
+    transform: scale(1) rotate(0deg);
   }
-  to {
-    transform: scale(1.05) rotate(180deg);
-  }
-}
-@keyframes refresh-out {
-  from {
-    transform: rotate(180deg) scale(1.2);
-  }
-  to {
-    transform: rotate(0deg) scale(1);
-  }
-}
-@keyframes mobile-refresh {
-  from {
-    transform: rotate(0);
-
-  }
-  to {
-    transform: rotate(360deg) scale(1.1);
-
+  to{
+    transform: scale(1.1) rotate(180deg);
   }
   
 }
-@keyframes after-click-refresh{
+@keyframes mouse-removed-refresh {
   from{
-    transform: rotate(0deg);
+    transform: scale(1.1) rotate(180deg);
   }
   to{
-    transform: rotate(180deg);
+    transform: scale(1) rotate(0deg);
   }
+  
+}
+@keyframes mouse-clicked {
+  from{
+    transform: scale(1.1) rotate(180deg);
+  }
+  to{
+    transform: scale(1) rotate(360deg);
+  }
+  
 }

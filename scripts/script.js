@@ -1,3 +1,4 @@
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".header-nav-menu");
 const asideToggle = document.querySelector(".side");
@@ -15,27 +16,55 @@ document.querySelectorAll(".header-nav-link").forEach((n) =>
     asideToggle.classList.remove("active");
   })
 );
+const refreshButton = document.querySelector("#refresh-image");
+let clickFlag = false;
 
-//refresh button reverse animation
-const refresh = document.querySelector("#refresh-image");
-// let clicked = false;
-// refresh.addEventListener("click", ()=>{
-// clicked = true;
-// refresh.className= '';
-// refresh.classList.add("clicked");
-// console.log("added class clicked");
-// })
-refresh.addEventListener("mouseleave", () => {
-  // if(!clicked){
-  refresh.classList.add("refresh-out");
-  console.log("Mouse left the element!");
-  //deleting refreshout class after animation
-  setTimeout(() => {
-    refresh.classList.remove("refresh-out");
-    console.log("deleted");
-  }, 1000);
-// }
+
+refreshButton.addEventListener("mouseenter", () => {
+
+  refreshButton.classList.add("mouse-entered");
+
+  refreshButton.addEventListener("click", () => {
+    clickFlag = true;
+    
+    // refreshButton.classList.remove("mouse-entered");
+
+    console.log("get into CLICKED");
+
+    refreshButton.classList.add("mouse-clicked");
+
+    setTimeout(() => {
+
+      refreshButton.classList.remove("mouse-clicked")
+
+    refreshButton.classList.remove("mouse-entered")
+
+    },500);
+
+    refreshButton.addEventListener("mouseleave", () =>{
+
+      if(!clickFlag && !refreshButton.classList.contains("mouse-clicked") && refreshButton.classList.length != 0){
+
+      refreshButton.classList.remove("mouse-entered");
+
+      refreshButton.classList.add("mouse-removed"); //DALEJ ZBIERA MOUSE REMOVED
+
+      setTimeout(() => {refreshButton.classList.remove("mouse-removed")},500)}else{clickFlag=false} ;
+
+    });
+
+   
+
+  });
+
+
+
 });
+
+
+
+  
+
 //defining funfacts
 var funFactDictionary = new Object();
 var funFactDictionary = {
@@ -45,6 +74,7 @@ var funFactDictionary = {
     "Możesz użyć atrybutu download w <a> aby określić, że zawartość linku zostanie pobrana!",
 };
 //refresh funfuct if button clicked
+const refresh = document.querySelector("#refresh-image")
 refresh.addEventListener("click", () => {
   drawingFunFuct(funFactDictionary);
 });
