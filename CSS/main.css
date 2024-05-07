@@ -342,10 +342,7 @@ footer a:hover {
   }
 
   /* quiz button hardness tag higher */
-  #tag-higher {
-    position: relative;
-    bottom: 11.5vw;
-  }
+
 
   div:has(#tag-higher) b {
     font-size: 6vw;
@@ -488,50 +485,107 @@ footer a:hover {
   header p {
     display: none;
   }
+  .content-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
   aside{
-    width: 100%;
-    padding-top: 10vw;
-    background-color: rgba(6, 4, 138, 1);
     justify-content: center;
     transition: .3s;
     display: flex;
     color:white;  
-    
-
-
     justify-content: end;
+    background-color: none;
   }
  
   .fun-fact{
     margin-inline: auto;
     border-radius: 5vw;
-    
-    padding: 1vw 3vw;
+    width: 60vw;
+    padding: 1vw 2vw;
+    margin-bottom: 3.2vw;
   }
   .fact-title{
-    font-size: 5vw;
+    font-size: min(2.7vw, 1.8rem);
   }
   .fact-id{
-  font-size: 3vw;
-  margin-top: .5em;
+  font-size: min(1.6vw, 1.2rem);
+  margin-top: .2em;
   }
   .fact-content{
-    margin-top: 1em;
-    font-size: 4vw;
+    margin-top:.5em;
+    font-size: min(2.3vw, 1.5rem);
     padding-bottom: 0;
   }
   #refresh-image{
-    max-width: 9vw;
-    margin-top: 3vw;
+    max-width: 5vw;
+    margin-top: 2vw;
   }
-
+  main{
+display: grid;
+grid-template: repeat(4,4fr)/repeat(4,4fr);
+place-items: center;
+  }
+  .linkboxes {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    aspect-ratio: 1;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>');
+    background-repeat: no-repeat;
+    place-items: center;
+    margin-bottom: 5vw;
+    padding-top: 5%;
+    
+   
+  }
+  /* HTML/CSS tag */
+  b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: #02b7de;
+    height: 20%;
+    --b-heght: 100%;
+    
+  }
+  
+  .linkboxes .links {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+   width: 100%;
+   height: 100%;
+   font-size: 3vw;
+  }
+  
+  .linkboxes .hardness-tag {
+    color: #02b7de;
+    font-size: 2vw;
+    position:relative;
+    top: 3vw;
+   
+  }
+  
+  .big{
+height: fit-content;
+  }
+  .big b{
+ height: inherit;
+      }
+      #bigger{
+        font-size: 2.7vw;
+      }
 
 }
 
 @media (min-width: 1201px) and (max-width: 100000px) {
-  .wrapper{
-    flex-direction: row;
-  }
+
   header {
     margin: 0;
   }
@@ -576,6 +630,11 @@ footer a:hover {
   .header-nav-link {
     height: 1.8rem;
     padding-top: 0.8rem;
+  }
+  .content-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
   aside{
     display: flex;
