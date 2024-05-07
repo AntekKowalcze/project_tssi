@@ -411,7 +411,12 @@ footer a:hover {
   .fun-fact #refresh-image:active {
     animation: mobile-refresh .7s ease-out;
   } 
-
+.fun-fact#refresh-image.refresh-out{
+  animation: none;
+}
+fun-fact:hover{
+  animation: none;
+}
 
   /* footer */
   /* footer separator */
