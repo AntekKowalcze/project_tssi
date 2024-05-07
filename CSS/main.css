@@ -403,13 +403,12 @@ footer a:hover {
     max-width: 9vw;
     margin-top: 3vw;
   }
-  /* #refresh-image.refresh-out {
-    animation: none;
-  }
+ 
 
-  .fun-fact #refresh-image:hover {
-    animation: none;
-  } */
+  .fun-fact #refresh-image:active {
+    animation: mobile-refresh .7s ease-out;
+  } 
+
 
   /* footer */
   /* footer separator */
@@ -761,4 +760,15 @@ footer a:hover {
   to {
     transform: rotate(0deg) scale(1);
   }
+}
+@keyframes mobile-refresh {
+  from {
+    transform: rotate(0);
+
+  }
+  to {
+    transform: rotate(360deg) scale(1.1);
+    transition: ease-in-out 1s;
+  }
+  
 }
