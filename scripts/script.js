@@ -18,7 +18,15 @@ document.querySelectorAll(".header-nav-link").forEach((n) =>
 
 //refresh button reverse animation
 const refresh = document.querySelector("#refresh-image");
+// let clicked = false;
+// refresh.addEventListener("click", ()=>{
+// clicked = true;
+// refresh.className= '';
+// refresh.classList.add("clicked");
+// console.log("added class clicked");
+// })
 refresh.addEventListener("mouseleave", () => {
+  // if(!clicked){
   refresh.classList.add("refresh-out");
   console.log("Mouse left the element!");
   //deleting refreshout class after animation
@@ -26,6 +34,7 @@ refresh.addEventListener("mouseleave", () => {
     refresh.classList.remove("refresh-out");
     console.log("deleted");
   }, 1000);
+// }
 });
 //defining funfacts
 var funFactDictionary = new Object();

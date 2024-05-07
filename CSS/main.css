@@ -148,6 +148,9 @@ aside {
   text-align: center;
 }
 
+#refresh-image.clicked{
+  animation: after-click-refresh .5s ease-out;
+}
 #refresh-image.refresh-out {
   animation: refresh-out;
   animation-duration: 0.4s;
@@ -755,7 +758,7 @@ footer a:hover {
 }
 @keyframes refresh-out {
   from {
-    transform: rotate(-180deg) scale(1.2);
+    transform: rotate(180deg) scale(1.2);
   }
   to {
     transform: rotate(0deg) scale(1);
@@ -768,7 +771,15 @@ footer a:hover {
   }
   to {
     transform: rotate(360deg) scale(1.1);
-    transition: ease-in-out 1s;
+
   }
   
+}
+@keyframes after-click-refresh{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
 }
