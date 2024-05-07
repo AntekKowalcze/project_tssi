@@ -147,14 +147,14 @@ aside {
   height: fit-content;
   text-align: center;
 }
-.mouse-entered{
-  animation: mouse-entered-refresh .5s ease-in forwards ;
+.mouse-entered {
+  animation: mouse-entered-refresh 0.5s ease-in forwards;
 }
-.mouse-removed{
-  animation: mouse-removed-refresh .5s ease-in ;
+.mouse-removed {
+  animation: mouse-removed-refresh 0.5s ease-in;
 }
-.mouse-clicked{
-animation: mouse-clicked .5s ease-in;
+.mouse-clicked {
+  animation: mouse-clicked 0.5s ease-in;
 }
 footer {
   font-family: audiowide;
@@ -399,17 +399,15 @@ footer a:hover {
     max-width: 9vw;
     margin-top: 3vw;
   }
-  .mobile-clicked{
-    animation: mobile-refresh-animation .5s ease-in-out ;
+  .mobile-clicked {
+    animation: mobile-refresh-animation 0.5s ease-in-out;
   }
-  .mouse-entered{
+  .mouse-entered {
     animation: none;
   }
-  .mouse-removed{
+  .mouse-removed {
     animation: none;
   }
- 
-
 
   /* footer */
   /* footer separator */
@@ -747,38 +745,34 @@ footer a:hover {
   }
 }
 @keyframes mouse-entered-refresh {
-  from{
+  from {
     transform: scale(1) rotate(0deg);
   }
-  to{
+  to {
     transform: scale(1.1) rotate(180deg);
   }
-  
 }
 @keyframes mouse-removed-refresh {
-  from{
+  from {
     transform: scale(1.1) rotate(180deg);
   }
-  to{
+  to {
     transform: scale(1) rotate(0deg);
   }
-  
 }
 @keyframes mouse-clicked {
-  from{
+  from {
     transform: scale(1.1) rotate(180deg);
   }
-  to{
+  to {
     transform: scale(1) rotate(360deg);
   }
-  
 }
 @keyframes mobile-refresh-animation {
-  from{
+  from {
     transform: rotate(0deg);
   }
-  to{
+  to {
     transform: rotate(360deg);
   }
-  
 }

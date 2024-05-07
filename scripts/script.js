@@ -1,4 +1,3 @@
-
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".header-nav-menu");
 const asideToggle = document.querySelector(".side");
@@ -19,56 +18,45 @@ document.querySelectorAll(".header-nav-link").forEach((n) =>
 const refreshButton = document.querySelector("#refresh-image");
 let clickFlag = false;
 
-
 refreshButton.addEventListener("mouseenter", () => {
-
   refreshButton.classList.add("mouse-entered");
 
   refreshButton.addEventListener("click", () => {
     clickFlag = true;
-    
+
     // refreshButton.classList.remove("mouse-entered");
 
     console.log("get into CLICKED");
- 
+
     refreshButton.classList.add("mouse-clicked");
     refreshButton.classList.add("mobile-clicked");
 
     setTimeout(() => {
-
-      refreshButton.classList.remove("mouse-clicked")
-
-    refreshButton.classList.remove("mouse-entered")
-    refreshButton.classList.remove("mobile-clicked");
-    },500);
-
-
- 
-   
-  
-    refreshButton.addEventListener("mouseleave", () =>{
-
-      if(!clickFlag && !refreshButton.classList.contains("mouse-clicked") && refreshButton.classList.length != 0){
+      refreshButton.classList.remove("mouse-clicked");
 
       refreshButton.classList.remove("mouse-entered");
+      refreshButton.classList.remove("mobile-clicked");
+    }, 500);
 
-      refreshButton.classList.add("mouse-removed"); //DALEJ ZBIERA MOUSE REMOVED
+    refreshButton.addEventListener("mouseleave", () => {
+      if (
+        !clickFlag &&
+        !refreshButton.classList.contains("mouse-clicked") &&
+        refreshButton.classList.length != 0
+      ) {
+        refreshButton.classList.remove("mouse-entered");
 
-      setTimeout(() => {refreshButton.classList.remove("mouse-removed")},500)}else{clickFlag=false} ;
+        refreshButton.classList.add("mouse-removed"); //DALEJ ZBIERA MOUSE REMOVED
 
+        setTimeout(() => {
+          refreshButton.classList.remove("mouse-removed");
+        }, 500);
+      } else {
+        clickFlag = false;
+      }
     });
-
-   
-
   });
-
-
-
 });
-
-
-
-  
 
 //defining funfacts
 var funFactDictionary = new Object();
@@ -79,7 +67,7 @@ var funFactDictionary = {
     "Możesz użyć atrybutu download w <a> aby określić, że zawartość linku zostanie pobrana!",
 };
 //refresh funfuct if button clicked
-const refresh = document.querySelector("#refresh-image")
+const refresh = document.querySelector("#refresh-image");
 refresh.addEventListener("click", () => {
   drawingFunFuct(funFactDictionary);
 });
