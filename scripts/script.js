@@ -65,18 +65,16 @@ var funFactDictionary = {
     "Główną osią display:flex; jest oś posioma, chyba że zmienisz flex-direction: na column!",
   "#HTML1":
     "Możesz użyć atrybutu download w <a> aby określić, że zawartość linku zostanie pobrana!",
-    "#CSS2":
+  "#CSS2":
     "Jeśli użyjesz własności ease-in w animation-timing-function: animacja spowolni z końcem wykonania animacji!",
-    "#HTML2":
+  "#HTML2":
     "W pierwszej wersji HTML było 18 znaczników, a w wersji HTML5 jest jch 180!",
-    "#HTML3":
+  "#HTML3":
     "Skrót HTML rozwija się na Hyper Text Markup Language co tłumaczy się na hipertekstowy język znaczników",
-    "#HTMl4":
+  "#HTMl4":
     "Używając znacznika <script> możemy wykonać na stronie skrypt w różnych językach w zależności od przeglądarki!",
-    "#CSS3":
-    "Możesz stworzyć zmienną pisząc jej nazwę po dwóch myślnikach np. --bg-color: black, aby jej użyć wpisujesz var(--bg-color)"
-
-    
+  "#CSS3":
+    "Możesz stworzyć zmienną pisząc jej nazwę po dwóch myślnikach np. --bg-color: black, aby jej użyć wpisujesz var(--bg-color)",
 };
 //refresh funfuct if button clicked
 const refresh = document.querySelector("#refresh-image");

@@ -1,41 +1,33 @@
 /* svgbutton background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>'); */
 
-:root{
+:root {
   --clr-bcg: #d3d3d3;
   --font-color: #000000;
 }
 /*!DARKMODE */
 /* !On smaller screen list dark mode on link not on list item!! */
-.darkmode{
-/* font gradient */
-/* background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+.darkmode {
+  /* font gradient */
+  /* background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;   */
---clr-bcg: #010011;
---font-color: #d3d3d3;
+  --clr-bcg: #010011;
+  --font-color: #d3d3d3;
 }
-.color-toogle{
-  background-image:linear-gradient(
-    90deg,
-    #22c1c3 0%,
-    rgba(6, 4, 138, 1) 100%
-  );
+.color-toogle {
+  background-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
   background-size: 100%;
-   background-clip: text;
-   -webkit-background-clip: text;
-   -moz-background-clip: text;
-   -webkit-text-fill-color: transparent; 
-   -moz-text-fill-color: transparent;
-  
-
-
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 /*! to make darkmode on navigation adding darkomode-list class on item is needed + color-toogle class in link */
-.darkmode-list{
+.darkmode-list {
   background: linear-gradient(black, black) padding-box,
-  linear-gradient(90deg,   #22c1c3 0%,
-  rgba(6, 4, 138, 1) 100%) border-box;
-  border: .3vw solid transparent;
+    linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
+  border: 0.3vw solid transparent;
 }
 
 @font-face {
@@ -93,11 +85,8 @@ li {
   margin: 0;
 
   /* make it off  */
-  border-radius:1em;
+  border-radius: 1em;
   transition: ease-in-out 0.2s;
-
-  
-  
 }
 .burger-box {
   margin-top: 2.1vw;
@@ -115,7 +104,7 @@ li {
   color: white;
   text-decoration: none;
   border-radius: 1em;
- 
+
   background: rgba(6, 4, 138, 1);
   background: linear-gradient(
     90deg,
@@ -124,8 +113,7 @@ li {
   );
   background-size: cover;
   background-repeat: no-repeat;
-  border: .2vw solid black;
-  
+  border: 0.2vw solid black;
 }
 
 .header-nav-item:hover {
@@ -135,7 +123,7 @@ li {
 body {
   /* background */
   background: var(--clr-bcg);
-  
+
   /* background */
   /* display */
   display: flex;
@@ -150,7 +138,6 @@ body {
   margin-inline: auto;
 }
 /* website navigation elements */
-
 
 /* footer */
 /* footer separator */
@@ -167,7 +154,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
-  height: min(.7vw, 4px);
+  height: min(0.7vw, 4px);
 }
 /* FUNFUCT */
 aside {
@@ -191,7 +178,6 @@ aside {
   animation: mouse-clicked 0.5s ease-in;
 }
 footer {
-  
   font-family: audiowide;
   text-align: center;
   font-size: min(1.5rem, 2vw);
@@ -222,25 +208,16 @@ footer p {
 }
 footer a:hover {
   transition: 0.2s;
-  border-image: linear-gradient(
-    90deg,
-    #22c1c3 0%,
-    rgba(6, 4, 138, 1) 100%
-  );
+  border-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
   border-image-slice: 1;
-  border-width: .2vw;
-  
+  border-width: 0.2vw;
 }
 
 @media (max-width: 769px) {
   header {
-    border-image: linear-gradient(
-      90deg,
-      #22c1c3 0%,
-      rgba(6, 4, 138, 1) 100%
-    );
+    border-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
     border-image-slice: 1;
-    border-width: .7vw;
+    border-width: 0.7vw;
     border-bottom-style: solid;
     align-items: center;
     position: sticky;
@@ -271,7 +248,7 @@ footer a:hover {
   .hamburger {
     display: block;
     margin-bottom: 3.9vw;
- 
+
     margin-right: 5vw;
   }
   /* hamburger icon + transition */
@@ -284,7 +261,7 @@ footer a:hover {
       rgba(34, 193, 195, 1) 0%,
       rgba(6, 4, 138, 1) 100%
     );
-  
+
     background-size: cover;
     background-repeat: no-repeat;
     height: 1vw;
@@ -325,18 +302,13 @@ footer a:hover {
     margin-inline: auto;
     font-size: 2.5vw;
     background: linear-gradient(black, black) padding-box,
-    linear-gradient( 90deg,
-    #22c1c3 0%,
-    rgba(6, 4, 138, 1) 100%) border-box;
-
-    
+      linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
   }
   .header-nav-link {
     min-height: 2vw;
     width: 30vw;
     padding: min(3vw, 0.8rem) 2vw;
-    border-width: .3vw;
-
+    border-width: 0.3vw;
   }
 
   .header-nav-menu.active {
@@ -362,11 +334,7 @@ footer a:hover {
     display: none;
   }
 
-
-
   /* BUTTONS */
-
-
 
   aside {
     width: 100%;
@@ -421,7 +389,7 @@ footer a:hover {
   /* footer */
   /* footer separator */
   hr {
-    height: .7vw;
+    height: 0.7vw;
   }
 
   footer {
@@ -448,12 +416,10 @@ footer a:hover {
   footer p {
     font-size: 6vw;
   }
-
-  
 }
 /* fixing funfuct */
 
-@media  (max-width: 769px) {
+@media (max-width: 769px) {
   aside {
     top: 83vw;
     padding-top: 10vw;
@@ -461,7 +427,6 @@ footer a:hover {
   .header-nav-menu {
     height: 60vw;
   }
- 
 }
 /* @media (max-width: 180px){
   aside{
@@ -529,7 +494,6 @@ footer a:hover {
     max-width: 5vw;
     margin-top: 2vw;
   }
-
 }
 
 @media (min-width: 1201px) and (max-width: 100000px) {
@@ -616,8 +580,6 @@ footer a:hover {
     margin-top: 1rem;
     max-width: 3vw;
   }
-
-
 }
 @keyframes mouse-entered-refresh {
   from {
