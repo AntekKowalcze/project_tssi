@@ -1,4 +1,43 @@
 /* svgbutton background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>'); */
+
+:root{
+  --clr-bcg: #d3d3d3;
+  --font-color: #000000;
+}
+/*!DARKMODE */
+/* !On smaller screen list dark mode on link not on list item!! */
+.darkmode{
+/* font gradient */
+/* background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;   */
+--clr-bcg: #010011;
+--font-color: #d3d3d3;
+}
+.color-toogle{
+  background-image:linear-gradient(
+    90deg,
+    #22c1c3 0%,
+    rgba(6, 4, 138, 1) 100%
+  );
+  background-size: 100%;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent; 
+   -moz-text-fill-color: transparent;
+  
+
+
+}
+/*! to make darkmode on navigation adding darkomode-list class on item is needed + color-toogle class in link */
+.darkmode-list{
+  background: linear-gradient(black, black) padding-box,
+  linear-gradient(90deg,   #22c1c3 0%,
+  rgba(6, 4, 138, 1) 100%) border-box;
+  border: .3vw solid transparent;
+}
+
 @font-face {
   font-family: audiowide;
   src: url(../fonts/Audiowide/Audiowide.ttf);
@@ -11,6 +50,7 @@
 
 * {
   font-family: play;
+  color: var(--font-color);
 }
 
 header {
@@ -51,6 +91,13 @@ li {
   width: 15vw;
   max-width: 8rem;
   margin: 0;
+
+  /* make it off  */
+  border-radius:1em;
+  transition: ease-in-out 0.2s;
+
+  
+  
 }
 .burger-box {
   margin-top: 2.1vw;
@@ -61,7 +108,6 @@ li {
   padding: 0 0.3em;
   font-family: play;
   padding-top: 0.5rem;
-  background-color: #02b7de;
   width: 100%;
   min-height: 1.5rem;
   text-align: center;
@@ -69,25 +115,27 @@ li {
   color: white;
   text-decoration: none;
   border-radius: 1em;
-  transition: ease-in-out 0.2s;
+ 
+  background: rgba(6, 4, 138, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(6, 4, 138, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: .2vw solid black;
+  
 }
 
-.header-nav-link:hover {
+.header-nav-item:hover {
   transform: scale(1.1);
 }
 
 body {
   /* background */
-  background: rgba(6, 4, 138, 1);
-  background: linear-gradient(
-    0deg,
-    #22c1c3 0%,
-    rgba(6, 4, 138, 1) 100%
-  );
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: var(--clr-bcg);
+  
   /* background */
   /* display */
   display: flex;
@@ -102,38 +150,24 @@ body {
   margin-inline: auto;
 }
 /* website navigation elements */
-.linkboxes {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  aspect-ratio: 1;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>');
-  background-repeat: no-repeat;
-  place-items: center;
-}
-/* HTML/CSS tag */
-b {
-  color: #02b7de;
-}
 
-.linkboxes .links {
-  text-decoration: none;
-  color: black;
-  text-align: center;
-  width: 20%;
-}
-
-.linkboxes .hardness-tag {
-  color: #02b7de;
-}
 
 /* footer */
 /* footer separator */
 hr {
   display: block;
   height: clamp(0.1rem, 0.5rem, 0.7rem);
-  background-color: white;
+  background: rgba(6, 4, 138, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(6, 4, 138, 1) 100%
+  );
+
+  background-size: cover;
+  background-repeat: no-repeat;
   border: none;
+  height: min(.7vw, 4px);
 }
 /* FUNFUCT */
 aside {
@@ -157,6 +191,7 @@ aside {
   animation: mouse-clicked 0.5s ease-in;
 }
 footer {
+  
   font-family: audiowide;
   text-align: center;
   font-size: min(1.5rem, 2vw);
@@ -174,14 +209,14 @@ footer li {
 }
 
 footer a {
-  color: white;
+  color: var(--font-color);
   text-decoration: none;
   border-bottom: 0px solid white;
 }
 
 /* signature */
 footer p {
-  color: white;
+  color: var(--font-color);
   font-size: min(1.3rem, 2vw);
   padding-top: 10px;
 }
@@ -189,23 +224,32 @@ footer a:hover {
   transition: 0.2s;
   border-image: linear-gradient(
     90deg,
-    rgb(122, 120, 255) 0%,
+    #22c1c3 0%,
     rgba(6, 4, 138, 1) 100%
   );
   border-image-slice: 1;
-  border-width: 3px;
+  border-width: .2vw;
+  
 }
 
 @media (max-width: 769px) {
   header {
-    border-bottom: #d3d3d3 max(0.1vh, 1px) solid;
+    border-image: linear-gradient(
+      90deg,
+      #22c1c3 0%,
+      rgba(6, 4, 138, 1) 100%
+    );
+    border-image-slice: 1;
+    border-width: .7vw;
+    border-bottom-style: solid;
     align-items: center;
     position: sticky;
     top: 0;
     right: 0;
     width: 100vw;
-    background-color: rgba(6, 4, 138, 1);
+    background-color: var(--clr-bcg);
     z-index: 9999;
+    margin-bottom: 100px;
   }
   .site-logo {
     max-width: 40vw;
@@ -227,14 +271,22 @@ footer a:hover {
   .hamburger {
     display: block;
     margin-bottom: 3.9vw;
-    
+ 
     margin-right: 5vw;
   }
   /* hamburger icon + transition */
   .bar {
     display: block;
     width: 9vw;
-    background-color: #02b7de;
+    background: rgba(6, 4, 138, 1);
+    background: linear-gradient(
+      90deg,
+      rgba(34, 193, 195, 1) 0%,
+      rgba(6, 4, 138, 1) 100%
+    );
+  
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 1vw;
     margin-top: 1.8vw;
     -webkit-transition: all 0.3 ease-in-out;
@@ -260,7 +312,7 @@ footer a:hover {
     top: 24vw;
     gap: 0;
     flex-direction: column;
-    background-color: rgba(6, 4, 138, 1);
+    background-color: var(--clr-bcg);
     width: 100vw;
     text-align: center;
     transition: 0.3s;
@@ -272,11 +324,19 @@ footer a:hover {
     width: 30%;
     margin-inline: auto;
     font-size: 2.5vw;
+    background: linear-gradient(black, black) padding-box,
+    linear-gradient( 90deg,
+    #22c1c3 0%,
+    rgba(6, 4, 138, 1) 100%) border-box;
+
+    
   }
   .header-nav-link {
     min-height: 2vw;
     width: 30vw;
     padding: min(3vw, 0.8rem) 2vw;
+    border-width: .3vw;
+
   }
 
   .header-nav-menu.active {
@@ -286,7 +346,7 @@ footer a:hover {
 
   /* line under header */
   .darker {
-    background-color: #d3d3d3;
+    background-color: d3d3d3;
     position: relative;
     top: 2.8em;
     margin: 0;
@@ -302,75 +362,24 @@ footer a:hover {
     display: none;
   }
 
-  /* main display */
-  main {
-    display: flex;
-    flex-direction: row;
-    place-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+
 
   /* BUTTONS */
 
-  .linkboxes {
-    width: 48%;
-    margin-right: 0.35em;
-    margin-top: 0.5em;
-    padding-top: 14vw;
-  }
 
-  /* html/css tag in button */
-  b {
-    font-weight: 900;
-  }
-
-  /* links */
-  .linkboxes .links {
-    position: relative;
-    bottom: 2vw;
-    margin-top: 0;
-    font-size: 10vw;
-    margin-bottom: 10vw;
-    width: 100%;
-  }
-
-  .linkboxes .hardness-tag {
-    font-size: 4vw;
-    padding: 0;
-    margin: 0;
-    margin-top: 10vw;
-  }
-
-  /* quiz button hardness tag higher */
-
-  div:has(#tag-higher) b {
-    font-size: 6vw;
-  }
-
-  /* setting non fitable text to lower font size */
-  .big {
-    font-size: 8vw;
-    font-style: normal;
-  }
-
-  #bigger {
-    font-size: 6vw;
-    font-style: normal;
-  }
 
   aside {
     width: 100%;
     padding-top: 10vw;
     padding-bottom: 2vw;
-    background-color: rgba(6, 4, 138, 1);
+    background-color: var(--clr-bcg);
     justify-self: center;
     transition: 0.3s;
     display: flex;
     color: white;
     position: fixed;
     left: -100%;
-    top: 80vw;
+    top: 83vw;
     z-index: 10000000;
   }
   aside.active {
@@ -412,7 +421,7 @@ footer a:hover {
   /* footer */
   /* footer separator */
   hr {
-    height: 3px;
+    height: .7vw;
   }
 
   footer {
@@ -440,28 +449,26 @@ footer a:hover {
     font-size: 6vw;
   }
 
-  /* some responsiwe improvements */
-  @media (max-width: 295px) {
-    .linkboxes .links {
-      padding-top: 5vw;
-      font-size: 7vw;
-    }
-
-    .big {
-      font-size: 5vw;
-    }
-  }
+  
 }
 /* fixing funfuct */
-@media (min-width: 465px) and (max-width: 769px) {
+
+@media  (max-width: 769px) {
   aside {
-    top: 80vw;
-    padding-top: 0;
+    top: 83vw;
+    padding-top: 10vw;
   }
   .header-nav-menu {
     height: 60vw;
   }
+ 
 }
+/* @media (max-width: 180px){
+  aside{
+    
+    top: 87vw;
+  }
+} */
 @media (min-width: 770px) and (max-width: 1200px) {
   /* site logo */
   .site-logo img {
@@ -522,69 +529,7 @@ footer a:hover {
     max-width: 5vw;
     margin-top: 2vw;
   }
-  main {
-    display: grid;
-    grid-template: repeat(4, 4fr) / repeat(4, 4fr);
-    place-items: center;
-  }
-  .linkboxes {
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    aspect-ratio: 1;
-    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>');
-    background-repeat: no-repeat;
-    place-items: center;
-    margin-bottom: 5vw;
-    padding-top: 5%;
-    transition: ease-in-out 0.2s;
-  }
-  /* HTML/CSS tag */
-  b {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    color: #02b7de;
-    height: 20%;
-  }
 
-  .linkboxes .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    font-size: 3vw;
-    transition: ease-in-out 0.2s;
-  }
-  .linkboxes:hover {
-    transform: scale(1.05);
-  }
-  .linkboxes .links:active {
-    transform: scale(0.95);
-    transition: 0.1s ease-in;
-  }
-
-  .linkboxes .hardness-tag {
-    color: #02b7de;
-    font-size: 2vw;
-    position: relative;
-    top: 3vw;
-  }
-
-  .big {
-    height: fit-content;
-  }
-  .big b {
-    height: inherit;
-  }
-  #bigger {
-    font-size: 2.5vw;
-  }
 }
 
 @media (min-width: 1201px) and (max-width: 100000px) {
@@ -615,7 +560,7 @@ footer a:hover {
   h1 {
     margin-top: min(2.5rem, 1.7vh);
     font-family: audiowide;
-    color: white;
+    color: var(--font-color);
     font-size: 2.5rem;
     width: fit-content;
   }
@@ -635,16 +580,7 @@ footer a:hover {
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
-  main {
-    margin-left: clamp(15vw, 12vw, 1vw);
-    display: grid;
-    grid-template: repeat(4, 4fr) / repeat(4, 4fr);
-    place-items: center;
-    position: relative;
-    right: 5vw;
-    gap: 2vw;
-    margin-left: max(15vw, 12.7rem);
-  }
+
   aside {
     display: flex;
     color: white;
@@ -680,69 +616,8 @@ footer a:hover {
     margin-top: 1rem;
     max-width: 3vw;
   }
-  .content-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-  }
 
-  .linkboxes {
-    display: flex;
-    flex-direction: column;
-    width: 12vw;
-    max-width: 15rem;
-    aspect-ratio: 1;
-    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="%23c62e65"><path d="M 0 80 C 0 0, 0 0, 80 0 S 160 0, 160 80, 160 160 80 160, 0 160, 0 80 " transform=" rotate( 0, 80, 80 ) translate( 0, 0 ) "></path></svg>');
-    background-repeat: no-repeat;
-    place-items: center;
-    padding-top: 5%;
-    transition: ease-in-out 0.2s;
-  }
-  /* HTML/CSS tag */
-  b {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    color: #02b7de;
-    height: 20%;
-  }
 
-  .linkboxes .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    font-size: min(2vw, 2.5rem);
-    transition: ease-in-out 0.2s;
-  }
-  .linkboxes:hover {
-    transform: scale(1.05);
-  }
-  .linkboxes .links:active {
-    transform: scale(0.95);
-    transition: 0.1s ease-in;
-  }
-
-  .linkboxes .hardness-tag {
-    color: #02b7de;
-    font-size: min(1vw, 1.5rem);
-    position: relative;
-    margin-top: min(3vw, 1em);
-  }
-
-  .big {
-    height: fit-content;
-  }
-  .big b {
-    height: inherit;
-  }
-  #bigger {
-    font-size: min(1.5vw, 2rem);
-  }
 }
 @keyframes mouse-entered-refresh {
   from {
@@ -776,3 +651,4 @@ footer a:hover {
     transform: rotate(360deg);
   }
 }
+/*! bugs: on very small devices (200px and less) funfuct overflow hamburger menu*/
