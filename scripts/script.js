@@ -46,7 +46,7 @@ refreshButton.addEventListener("mouseenter", () => {
       ) {
         refreshButton.classList.remove("mouse-entered");
 
-        refreshButton.classList.add("mouse-removed"); //DALEJ ZBIERA MOUSE REMOVED
+        refreshButton.classList.add("mouse-removed"); 
 
         setTimeout(() => {
           refreshButton.classList.remove("mouse-removed");

@@ -5,17 +5,12 @@
   --font-color: #000000;
 }
 /*!DARKMODE */
-/* !On smaller screen list dark mode on link not on list item!! */
 .darkmode {
-  /* font gradient */
-  /* background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;   */
   --clr-bcg: #010011;
   --font-color: #d3d3d3;
 }
 
-
+/* Ading fonts */
 @font-face {
   font-family: audiowide;
   src: url(../fonts/Audiowide/Audiowide.ttf);
@@ -90,7 +85,6 @@ li {
   color: white;
   text-decoration: none;
   border-radius: 1em;
-
   background: rgba(6, 4, 138, 1);
   background: linear-gradient(
     90deg,
@@ -101,23 +95,26 @@ li {
   background-repeat: no-repeat;
   border: 0.2vw solid black;
 }
+.header-nav-item:hover {
+  transform: scale(1.1);
+}
+/* dark mode button */
 .light-dark-mode-icon{
   max-width: 100%;
   width: 100%;
   aspect-ratio: 1/1;
-  
+
 }
 .light-dark-mode-button{
  width: 3vw;
 }
-.light-dark-mode-button img.dark{
-  animation: darkmode-toogle .6s ease-out both;
+/* darkmode animations */
+.light-dark-mode-button #light-dark-mode-icon.dark{
+  animation: darkmode-was-off .6s ease-out forwards;
     }
- 
-.header-nav-item:hover {
-  transform: scale(1.1);
-}
-
+  .light-dark-mode-button #light-dark-mode-icon.light{
+      animation: darkmode-was-on .6s ease-out forwards;
+        }
 body {
   /* background */
   background: var(--clr-bcg);
@@ -148,7 +145,6 @@ hr {
     rgba(34, 193, 195, 1) 0%,
     rgba(6, 4, 138, 1) 100%
   );
-
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -210,7 +206,7 @@ footer a:hover {
   border-image-slice: 1;
   border-width: 0.2vw;
 }
-
+/* Phones */
 @media (max-width: 769px) {
   header {
     border-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
@@ -240,6 +236,7 @@ footer a:hover {
     top: 7.8vw;
     left: 75vw;
    }
+   /* position improvements */
    @media(max-width: 180px){
     .light-dark-mode-button{
       bottom: clamp(2px, 2vw, 4vw);
@@ -270,7 +267,6 @@ footer a:hover {
       rgba(34, 193, 195, 1) 0%,
       rgba(6, 4, 138, 1) 100%
     );
-
     background-size: cover;
     background-repeat: no-repeat;
     height: 1vw;
@@ -315,6 +311,7 @@ footer a:hover {
     background: linear-gradient(black, black) padding-box,
       linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
   }
+ 
   .header-nav-link {
     min-height: 2vw;
     width: 30vw;
@@ -365,6 +362,7 @@ footer a:hover {
     left: 0;
     transition: ease-in-out 0.5s;
   }
+  /* funfucts improvements */
   .fun-fact {
     margin-inline: auto;
     border-radius: 5vw;
@@ -428,7 +426,7 @@ footer a:hover {
     font-size: 6vw;
   }
 }
-
+/* Laptops/landscape */
 @media (min-width: 770px) and (max-width: 1200px) {
   /* site logo */
   .site-logo img {
@@ -464,6 +462,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
   }
+  /* funfuct */
   aside {
     justify-content: center;
     display: flex;
@@ -496,7 +495,7 @@ footer a:hover {
     margin-top: 2vw;
   }
 }
-
+/*pc's*/
 @media (min-width: 1201px) and (max-width: 100000px) {
   header {
     margin-inline: auto;
@@ -513,6 +512,7 @@ footer a:hover {
     aspect-ratio: 5/3;
     margin: 0;
   }
+  /* darkmode toggle button */
   .light-dark-mode-button{
     max-width: 3.4rem;
     margin-right: 5vw;
@@ -526,7 +526,7 @@ footer a:hover {
     position: relative;
     bottom: 1rem;
   }
-
+/* site title */
   h1 {
     margin-top: min(2.5rem, 1.7vh);
     font-family: audiowide;
@@ -534,7 +534,7 @@ footer a:hover {
     font-size: 2.5rem;
     width: fit-content;
   }
-
+/* navigation */
   .header-nav-menu {
     margin-top: 1rem;
     position: relative;
@@ -550,7 +550,7 @@ footer a:hover {
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
-
+/* funfuct */
   aside {
     display: flex;
     color: white;
@@ -587,7 +587,7 @@ footer a:hover {
     max-width: 3vw;
   }
 }
-
+/* Animations */
 @keyframes mouse-entered-refresh {
   from {
     transform: scale(1) rotate(0deg);
@@ -620,7 +620,7 @@ footer a:hover {
     transform: rotate(360deg);
   }
 }
-@keyframes darkmode-toogle {
+@keyframes darkmode-was-off {
   from{
 transform: rotate(0deg);
   }
@@ -629,7 +629,18 @@ transform: rotate(0deg);
    
   }
 }
-/*! bugs: on very small devices (200px and less) funfuct overflow hamburger menu*/
+@keyframes darkmode-was-on {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+  /* DARKMODE after toggle*/
+
+
 .color-toogle {
   background-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
   background-size: 100%;
@@ -638,10 +649,21 @@ transform: rotate(0deg);
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  border: none;
+ 
 }
 /*! to make darkmode on navigation adding darkomode-list class on item is needed + color-toogle class in link */
 .darkmode-list {
   background: linear-gradient(black, black) padding-box,
     linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
-  border: 0.3vw solid transparent;
+  border: 0.2vw solid transparent;
+
 }
+@media (max-width: 769px){
+  .darkmode-list{
+    padding-inline:4.6vw;
+    
+  }
+  
+}
+/*! bugs: on very small devices (200px and less) funfuct overflow hamburger menu*/
