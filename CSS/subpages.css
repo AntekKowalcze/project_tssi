@@ -705,11 +705,12 @@ aspect-ratio: 3/4;
     width: 20%;
     margin-left: 70vw;
     min-height: 5vw;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0;
     
   }
   #next{
-    text-decoration: none;
+    text-decoration: none;    
   }
 }
 /*pc's*/

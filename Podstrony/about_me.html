@@ -11,46 +11,54 @@
     />
     <title>HTML5 i CSS3</title>
     <link rel="stylesheet" href="../CSS/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../CSS/test_darkmode.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/subpages.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/3.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../CSS/prism_light_mode.css"
+      id="sheet"
+    />
     <link rel="icon" type="image/x-icon" href="../Obrazy/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="../CSS/dark_mode_prism.css" />
   </head>
   <body>
     <div class="wrapper"></div>
     <header>
       <nav class="nav-bar">
-        <a href="#" class="site-logo"
+        <a href="../index.html" class="site-logo"
           ><img class="logo" src="../Obrazy/site-logo.png" alt="logo strony"
         /></a>
 
         <div class="burger-box">
           <h1>Strona o HTML5 i CSS3</h1>
           <ul class="header-nav-menu">
-            <li class="header-nav-item darkmode-list">
-              <a class="header-nav-link color-toogle" href="about.html"
-                >About</a
-              >
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="about.html">About</a>
             </li>
-            <li class="header-nav-item darkmode-list">
+            <li class="header-nav-item">
               <a
-                class="header-nav-link color-toogle"
+                class="header-nav-link"
                 href="https://github.com/AntekKowalcze/project_tssi"
                 >Github repo</a
               >
             </li>
-            <li class="header-nav-item darkmode-list">
-              <a class="header-nav-link color-toogle" href="../index.html"
-                >Strona główna</a
-              >
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="../index.html">Strona główna</a>
             </li>
-            <li class="header-nav-item darkmode-list">
-              <a class="header-nav-link color-toogle" href="slownik.html"
-                >Słownik</a
-              >
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="slownik.html">Słownik</a>
             </li>
           </ul>
         </div>
-      
+        <div class="light-dark-mode-button">
+          <img
+            src="../Obrazy/light-dark-icon.svg"
+            alt="light-dark-mode-icon"
+            id="light-dark-mode-icon"
+            class=""
+          />
+        </div>
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -61,18 +69,41 @@
     <div class="content-wrapper">
       <div class="path"></div>
       <main>
-        <pre> <code class="language-html">
-    
-          &lt;/main&gt;
-          &lt;aside class=&quot;side&quot;&gt;
-            &lt;div class=&quot;fun-fact&quot;&gt;
-              &lt;p class=&quot;fact-title&quot;&gt;Czy wiedziałeś że?&lt;/p&gt;
-              &lt;p class=&quot;fact-id&quot; id=&quot;id&quot;&gt;&lt;/p&gt;
-              &lt;p class=&quot;fact-content&quot; id=&quot;content&quot;&gt;&lt;/p&gt;
-              &lt;div class=&quot;refresh-button&quot;&gt;
-    
-         </code></pre>
-         <code class="lang-css">p {border: 1px solid white;}</code>
+        <div class="image-and-h2">
+          <h2>HEADING1</h2>
+          
+          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+        </div>
+
+        <h3>
+        HEADING2
+        <ul class="contents">
+          <p class="actual-content">Spis treści</p>
+          <li><a href="#what-is"></a></li>
+          <li><a href="#why"></a></li>
+          <li><a href="#where"></a></li>
+          <li><a href="#basics"></a></li>
+        </ul>
+        <p class="headings"></p>
+        <p id="what-is" class="actual-content">
+        
+        </p>
+      
+<h4 class="headings"  id="why">
+ 
+</h4>
+<p class="actual-content">
+
+</p>
+<h5 class="headings"id="where"></h5>
+<p class="actual-content"></p>
+  <h6 class="headings" id="basics"></h6>
+  <p class="actual-content"></p>
+<p class="actual-content">
+</p>
+<div id="button-next">
+  <a id="next" href="../Podstrony/listy.html">NASTĘPNY ARTYKUŁ</a>
+</div>
       </main>
       <aside class="side">
         <div class="fun-fact">
@@ -105,7 +136,9 @@
       </ul>
       <p>Antoni Kowalcze 2024</p>
     </footer>
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/hamburger.js"></script>
     <script src="../scripts/prism.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/funfuct.js"></script>
   </body>
 </html>
