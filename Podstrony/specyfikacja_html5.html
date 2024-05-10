@@ -70,27 +70,77 @@
       <main>
         <div class="image-and-h2">
           <h2>Podstawy HTML5</h2>
-          <img src="../Obrazy/Podstawy_html5/html5.png">
+          <img src="../Obrazy/Podstawy_html5/html5.png" />
         </div>
-       
-        <h3>HTML - Hiper text markup language (hipertekstowy język znaczników) to kod określający strukturę dokumentu, strony internetowej.
+
+        <h3>
+          HTML - Hiper text markup language (hipertekstowy język znaczników) to
+          kod określający strukturę dokumentu, strony internetowej.
         </h3>
         <ul class="contents">
           <p>Spis treści</p>
-          <li><a href="#what-is">Czym jest html?</a></li>
-          <li><a href="#">przyklad</a></li>
-          <li><a href="#">przyklad</a></li>
-          <li><a href="#">przyklad</a></li>
+          <li><a href="#what-is">Czym jest HTMl?</a></li>
+          <li><a href="#why">Po co nam HTML?</a></li>
+          <li><a href="#where">Skąd czerpać informacje?</a></li>
+          <li><a href="#basics">przyklad</a></li>
         </ul>
-        <p id="what-is">HTML to język znaczników, służacy do formatowania textu i rozmieszczania elementów na stronie.
-           Określenie język znaczników mówi nam, że składa się on <br>z elementów html typu &lt;html&gt;, &lt;body&gt;<br> czy &lt;ul&gt; Znaczniki odpowiadają za tworzenie struktury strony, np w znaczniku &lt;ul&gt; oznaczającym że w danym miejscu znajduje się lista umieszczamy znaczniki &lt;li&gt; skrót od list item (element listy).<br>Przykładowy kod html:</p>
-           <pre class="lang-html"><code>
+        <p id="what-is">
+          HTML to język znaczników, służacy 
+          do formatowania textu i
+          rozmieszczania elementów na stronie. 
+          Określenie język znaczników mówi
+          nam, że składa się on
+          z elementów html typu &lt;html&gt;,
+          &lt;body&gt;
+          czy &lt;ul&gt; Znaczniki odpowiadają 
+          za tworzenie struktury strony, np
+          w znaczniku &lt;ul&gt; oznaczającym 
+          że w danym miejscu znajduje się
+          lista umieszczamy znaczniki &lt;li&gt; 
+          skrót od list item (element
+          listy).
+          Przykładowy kod html:
+      
+        </p>
+        <pre class="lang-html"><code>
 &lt;ul&gt;
 &lt;li&gt;1. element listy&lt;/li&gt;
 &lt;li&gt;2. element listy&lt;/li&gt;
 &lt;li&gt;3. element listy&lt;/li&gt;
-&lt;/ul&gt;
-          </code></pre>
+&lt;/ul&gt; </code></pre>
+<h4 class="headings"  id="why">
+  Dlaczego używamy HTML?
+</h4>
+<p>
+Pierwsza wersja html została opublikowana w 1995 roku, a stworzona 1991. Od tamtego czasu HTML jest najpopularniejszym językiem znaczników, 
+głównie dzięki możliwości tworzenia stron internetowych, bo to jest jego główne użycie. Dziś bez jego znajomości ciężko znaleźć pracę w IT, 
+jest to absolutnie podstawowe narzędzie każdego frontend-owego programisty. Odpowiadając na pytanie, HTML jest bardzo prosty w użyciu, posiada wystarczające możliwości,
+ a jeśli nie możemy czegoś osiągnąć HTML używamy CSS (do wyglądu) i JavaScripta (do tworzenia bardziej zaawansowanych rzeczy).
+</p>
+<h5 class="headings"id="where">Skąd czerpać informacje?</h5>
+<p>Pierwszą wersję HTML stworzył <i>Berners-Lee</i>, zawierała ona 22 znaczniki, jednak teraz jest ich 115, a HTML "opiekuje" się fundacja W3C. 
+  Oficjalną specyfikację HTML5 można znaleźć na strone W3Schols. <a href="https://www.w3.org/TR/2011/WD-html5-20110405/#contents">link.</a> Warto również odwiedzić stronę 
+  W3Schols z tutorialami z HTML i wielu innych dziedzin informatyki <a href="https://www.w3schools.com/html/">link</a>.</p>
+  <h6 class="headings" id="basics">Podstawy</h6>
+  <p>Każdy dokument HTML ma określoną strukturę:</p>
+  <pre><code class="lang-html">&lt;!DOCTYPE HTML&gt;
+    &lt;html lang=&quot;pl&quot;&gt;
+      &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;/body&gt;
+    &lt;/html&gt; </code></pre>
+<p>Rozbijmy to na mniejsze części. Najważniejszym elementem tej struktury jest znacznik &lt;!DOCTYPE HTML&gt;, ponieważ to on mówi komputerowi że mamy do czynienia z dokumentem HTML.<br><br>
+  Następnie znajdujemy znacznik &lt;html&gt; w którym umieszczony jest atrybut lang - język z wartością pl czyli polski.
+  Znacznik &lt;head&gt; odpowiada za dostarczenie komputerowi meta informacji na temat dokumentu, czyli nie służy do wyświetlania treści. Wypisujemy w nim takie elementy jak kodowanie dokumentu
+  charset="Utf-8", tytuł dokumentu, wyświetlany na karcie w przegladarce, czy autora, prawa autorskie i tym podobne.
+  Kolejny jest znacznik &lt;body&gt; w którym znajduje się faktyczna treść dokumentu.
+</p>
+<div id="button-next">
+  <a href="podstawowe_znaczniki_html5.html" id="next">NASTĘPNY ARTYKUŁ</a>
+</div>
       </main>
       <aside class="side">
         <div class="fun-fact">

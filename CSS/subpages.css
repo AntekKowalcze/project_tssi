@@ -20,7 +20,9 @@
   src: url(../fonts/Play/Play-Regular.ttf);
   src: url(../fonts/Play/Play-Bold.ttf);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 * {
   font-family: play;
   color: var(--font-color);
@@ -220,8 +222,10 @@ footer a:hover {
   height: fit-content;
 }
 
+
 /* Phones */
 @media (max-width: 769px) {
+
   header {
     border-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
     border-image-slice: 1;
@@ -285,8 +289,8 @@ footer a:hover {
     background-repeat: no-repeat;
     height: 1vw;
     margin-top: 1.8vw;
-    -webkit-transition: all 0.3 ease-in-out;
-    transition: all 0.3 ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -383,6 +387,10 @@ aspect-ratio: 3/4;
     font-size: 6vw;
     width: 90%;
   }
+  .headings{
+    margin-top: 7vw;
+    font-size: 5vw;
+  }
   .contents{
     width: 70%;
     min-height: fit-content;
@@ -392,22 +400,32 @@ aspect-ratio: 3/4;
  padding-left: 5%;
  padding-block: 2vw;
  border-radius: 4vw;
+ padding-top: 1vw;
+  }
+  .contents p{
+    padding-top: 1vw;
   }
   .contents li{
     margin-left: 10%;
     margin-top: 2vw;
     list-style:upper-roman;
-    
+    margin-bottom: 1vw;
   }
   .contents a{
     text-decoration: none;
     font-style: italic;
   }
-  #what-is{
+
+  pre {
+  max-width: 70vw;
+  font-size: 4vw !important;
+  }
+  p {
     padding-top: 5vw;
     font-size: 4vw;
     width: 90%;
     line-height: 5.5vw;
+    margin-bottom: 3vw;
   }
 
   aside {
@@ -491,6 +509,26 @@ aspect-ratio: 3/4;
   footer p {
     font-size: 6vw;
   }
+  *{
+    scroll-margin-top: 25vw;
+  }
+  i{
+    font-style: italic;
+    font-weight: 600;
+  }
+  #button-next{
+    text-align: center;
+    background: linear-gradient(var(--clr-bcg), var(--clr-bcg)) padding-box,
+    linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
+    border: 1vw solid transparent;
+    border-radius: 2vw;
+    width: 30%;
+    margin-left: 60vw;
+  }
+  #next{
+    text-decoration: none;
+  }
+
 }
 /* Laptops/landscape */
 @media (min-width: 770px) and (max-width: 1200px) {

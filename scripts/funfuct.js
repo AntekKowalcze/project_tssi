@@ -51,7 +51,7 @@ var funFactDictionary = {
   "#CSS2":
     "Jeśli użyjesz własności ease-in w animation-timing-function: animacja spowolni z końcem wykonania animacji!",
   "#HTML2":
-    "W pierwszej wersji HTML było 18 znaczników, a w wersji HTML5 jest jch 180!",
+    "W pierwszej wersji HTML było 18 znaczników, a w wersji HTML5 jest jch 115!",
   "#HTML3":
     "Skrót HTML rozwija się na Hyper Text Markup Language co tłumaczy się na hipertekstowy język znaczników",
   "#HTML4":
