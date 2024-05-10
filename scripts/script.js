@@ -71,7 +71,7 @@ var funFactDictionary = {
     "W pierwszej wersji HTML było 18 znaczników, a w wersji HTML5 jest jch 180!",
   "#HTML3":
     "Skrót HTML rozwija się na Hyper Text Markup Language co tłumaczy się na hipertekstowy język znaczników",
-  "#HTMl4":
+  "#HTML4":
     "Używając znacznika <script> możemy wykonać na stronie skrypt w różnych językach w zależności od przeglądarki!",
   "#CSS3":
     "Możesz stworzyć zmienną pisząc jej nazwę po dwóch myślnikach np. --bg-color: black, aby jej użyć wpisujesz var(--bg-color)",

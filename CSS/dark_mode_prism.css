@@ -44,7 +44,9 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"] {
   padding: 0.15em 0.2em 0.05em;
   border-radius: 0.3em;
-  border: 0.13em solid #7a6651;
+  background: linear-gradient(#202a34, #202a34) padding-box,
+  linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
+border: 0.2em solid transparent;
   box-shadow: 1px 1px 0.3em -0.1em #000 inset;
   white-space: normal;
 }
