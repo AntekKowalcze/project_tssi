@@ -448,26 +448,34 @@ aspect-ratio: 3/4;
   }
   /* funfucts improvements */
   .fun-fact {
+    display: flex;
+    flex-direction: column;
     margin-inline: auto;
     border-radius: 5vw;
     max-width: 60vw;
     padding: 1vw 3vw;
+   align-items: center;
   }
   .fact-title {
     font-size: 5vw;
+    margin-bottom: 0;
   }
   .fact-id {
     font-size: 3vw;
     margin-top: 0.5em;
+    padding: 0;
+    margin:0;
   }
   .fact-content {
-    margin-top: 1em;
+    padding-top: 0;
     font-size: 4vw;
     padding-bottom: 0;
+    margin-bottom: 0;
   }
+  
   #refresh-image {
     max-width: 9vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
   }
   .mobile-clicked {
     animation: mobile-refresh-animation 0.5s ease-in-out;
@@ -597,6 +605,12 @@ aspect-ratio: 3/4;
   #refresh-image {
     max-width: 5vw;
     margin-top: 2vw;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  main{
+
   }
 }
 /*pc's*/
