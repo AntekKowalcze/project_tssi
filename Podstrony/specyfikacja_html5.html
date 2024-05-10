@@ -78,15 +78,15 @@
           kod określający strukturę dokumentu, strony internetowej.
         </h3>
         <ul class="contents">
-          <p>Spis treści</p>
+          <p class="actual-content">Spis treści</p>
           <li><a href="#what-is">Czym jest HTMl?</a></li>
           <li><a href="#why">Po co nam HTML?</a></li>
           <li><a href="#where">Skąd czerpać informacje?</a></li>
           <li><a href="#basics">Podstawy</a></li>
         </ul>
-        <p id="what-is">
+        <p id="what-is" class="actual-content">
           HTML to język znaczników, służacy 
-          do formatowania textu i
+          do formatowania tekstu i
           rozmieszczania elementów na stronie. 
           Określenie język znaczników mówi
           nam, że składa się on
@@ -111,18 +111,18 @@
 <h4 class="headings"  id="why">
   Dlaczego używamy HTML?
 </h4>
-<p>
+<p class="actual-content">
 Pierwsza wersja html została opublikowana w 1995 roku, a stworzona 1991. Od tamtego czasu HTML jest najpopularniejszym językiem znaczników, 
 głównie dzięki możliwości tworzenia stron internetowych, bo to jest jego główne użycie. Dziś bez jego znajomości ciężko znaleźć pracę w IT, 
 jest to absolutnie podstawowe narzędzie każdego frontend-owego programisty. Odpowiadając na pytanie, HTML jest bardzo prosty w użyciu, posiada wystarczające możliwości,
  a jeśli nie możemy czegoś osiągnąć HTML używamy CSS (do wyglądu) i JavaScripta (do tworzenia bardziej zaawansowanych rzeczy).
 </p>
 <h5 class="headings"id="where">Skąd czerpać informacje?</h5>
-<p>Pierwszą wersję HTML stworzył <i>Berners-Lee</i>, zawierała ona 22 znaczniki, jednak teraz jest ich 115, a HTML "opiekuje" się fundacja W3C. 
-  Oficjalną specyfikację HTML5 można znaleźć na strone W3Schols. <a href="https://www.w3.org/TR/2011/WD-html5-20110405/#contents">link.</a> Warto również odwiedzić stronę 
+<p class="actual-content">Pierwszą wersję HTML stworzył <i>Berners-Lee</i>, zawierała ona 22 znaczniki, jednak teraz jest ich 115, a HTML "opiekuje" się fundacja W3C. 
+  Oficjalną specyfikację HTML5 można znaleźć na strone W3Schools. <a href="https://www.w3.org/TR/2011/WD-html5-20110405/#contents">link.</a> Warto również odwiedzić stronę 
   W3Schols z tutorialami z HTML i wielu innych dziedzin informatyki <a href="https://www.w3schools.com/html/">link</a>.</p>
   <h6 class="headings" id="basics">Podstawy</h6>
-  <p>Każdy dokument HTML ma określoną strukturę:</p>
+  <p class="actual-content">Każdy dokument HTML ma określoną strukturę:</p>
   <pre><code class="lang-html">&lt;!DOCTYPE HTML&gt;
     &lt;html lang=&quot;pl&quot;&gt;
       &lt;head&gt;
@@ -132,7 +132,7 @@ jest to absolutnie podstawowe narzędzie każdego frontend-owego programisty. Od
       &lt;body&gt;
       &lt;/body&gt;
     &lt;/html&gt; </code></pre>
-<p>Rozbijmy to na mniejsze części. Najważniejszym elementem tej struktury jest znacznik &lt;!DOCTYPE HTML&gt;, ponieważ to on mówi komputerowi że mamy do czynienia z dokumentem HTML.<br><br>
+<p class="actual-content">Rozbijmy to na mniejsze części. Najważniejszym elementem tej struktury jest znacznik &lt;!DOCTYPE HTML&gt;, ponieważ to on mówi komputerowi że mamy do czynienia z dokumentem HTML.<br><br>
   Następnie znajdujemy znacznik &lt;html&gt; w którym umieszczony jest atrybut lang - język z wartością pl czyli polski.
   Znacznik &lt;head&gt; odpowiada za dostarczenie komputerowi meta informacji na temat dokumentu, czyli nie służy do wyświetlania treści. Wypisujemy w nim takie elementy jak kodowanie dokumentu
   charset="Utf-8", tytuł dokumentu, wyświetlany na karcie w przegladarce, czy autora, prawa autorskie i tym podobne.
