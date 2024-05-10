@@ -14,21 +14,7 @@
   --clr-bcg: #010011;
   --font-color: #d3d3d3;
 }
-.color-toogle {
-  background-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
-  background-size: 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-/*! to make darkmode on navigation adding darkomode-list class on item is needed + color-toogle class in link */
-.darkmode-list {
-  background: linear-gradient(black, black) padding-box,
-    linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
-  border: 0.3vw solid transparent;
-}
+
 
 @font-face {
   font-family: audiowide;
@@ -115,7 +101,19 @@ li {
   background-repeat: no-repeat;
   border: 0.2vw solid black;
 }
-
+.light-dark-mode-icon{
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  
+}
+.light-dark-mode-button{
+ width: 3vw;
+}
+.light-dark-mode-button img.dark{
+  animation: darkmode-toogle .6s ease-out both;
+    }
+ 
 .header-nav-item:hover {
   transform: scale(1.1);
 }
@@ -236,6 +234,17 @@ footer a:hover {
     margin-left: 0.25em;
     max-width: 40vw;
   }
+  .light-dark-mode-button{
+    width: 7vw;
+    position: fixed;
+    top: 7.8vw;
+    left: 75vw;
+   }
+   @media(max-width: 180px){
+    .light-dark-mode-button{
+      bottom: clamp(2px, 2vw, 4vw);
+     }
+   }
   /* sliding hamburger menu */
   .burger-box {
     display: flex;
@@ -248,7 +257,7 @@ footer a:hover {
   .hamburger {
     display: block;
     margin-bottom: 3.9vw;
-
+    position: relative;
     margin-right: 5vw;
   }
   /* hamburger icon + transition */
@@ -268,6 +277,7 @@ footer a:hover {
     margin-top: 1.8vw;
     -webkit-transition: all 0.3 ease-in-out;
     transition: all 0.3 ease-in-out;
+   
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -294,6 +304,7 @@ footer a:hover {
     text-align: center;
     transition: 0.3s;
     justify-content: start;
+    height: 60vw;
   }
   .header-nav-item {
     margin: 3vw 0;
@@ -417,23 +428,7 @@ footer a:hover {
     font-size: 6vw;
   }
 }
-/* fixing funfuct */
 
-@media (max-width: 769px) {
-  aside {
-    top: 83vw;
-    padding-top: 10vw;
-  }
-  .header-nav-menu {
-    height: 60vw;
-  }
-}
-/* @media (max-width: 180px){
-  aside{
-    
-    top: 87vw;
-  }
-} */
 @media (min-width: 770px) and (max-width: 1200px) {
   /* site logo */
   .site-logo img {
@@ -447,10 +442,16 @@ footer a:hover {
   .site-logo {
     height: 65%;
   }
-
+  .light-dark-mode-button{
+    min-width: 3vw;
+    position: relative;
+    right: max(10vw, 6.5rem);
+   top: 4vw;
+   }
   .header-nav-link {
     font-size: min(1.9vw, 1rem);
   }
+  
   /* hiding non used on this width elements */
   h1 {
     display: none;
@@ -512,6 +513,11 @@ footer a:hover {
     aspect-ratio: 5/3;
     margin: 0;
   }
+  .light-dark-mode-button{
+    max-width: 3.4rem;
+    margin-right: 5vw;
+   }
+ 
 
   /* header navigation and h1 */
   .burger-box {
@@ -581,6 +587,7 @@ footer a:hover {
     max-width: 3vw;
   }
 }
+
 @keyframes mouse-entered-refresh {
   from {
     transform: scale(1) rotate(0deg);
@@ -613,4 +620,28 @@ footer a:hover {
     transform: rotate(360deg);
   }
 }
+@keyframes darkmode-toogle {
+  from{
+transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+   
+  }
+}
 /*! bugs: on very small devices (200px and less) funfuct overflow hamburger menu*/
+.color-toogle {
+  background-image: linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+/*! to make darkmode on navigation adding darkomode-list class on item is needed + color-toogle class in link */
+.darkmode-list {
+  background: linear-gradient(black, black) padding-box,
+    linear-gradient(90deg, #22c1c3 0%, rgba(6, 4, 138, 1) 100%) border-box;
+  border: 0.3vw solid transparent;
+}
