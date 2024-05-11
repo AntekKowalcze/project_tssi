@@ -492,7 +492,7 @@ footer a:hover {
     display: flex;
     color: white;
     justify-content: end;
-    background-color: none;
+    background: none;
   }
 
   .fun-fact {

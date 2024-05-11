@@ -77,12 +77,14 @@
 
         <h3>
         Obrazki są na praktycznie każdej stronie internetowej, dlatego należy wiedzieć jak z nich korzystać.</h3>
-        <ul class="contents">
-          <p class="actual-content">Spis treści</p>
-          <li><a href="#what-is">Znacznik &lt;img&gt;</a></li>
-          <li><a href="#why">Umieszczanie obrazu jako link</a></li>
-          <li><a href="#where">Responsywność obrazka</a></li>
-        </ul>
+        <div class="contents">
+          <p class="actual-content" id="no-style">Spis treści</p>
+          <ul>
+            <li><a href="#what-is">Znacznik &lt;img&gt;</a></li>
+            <li><a href="#why">Umieszczanie obrazu jako link</a></li>
+            <li><a href="#where">Responsywność obrazka</a></li>
+          </ul>
+        </div>
         <p class="headings">Znacznik &lt;img&gt;</p>
         <p id="what-is" class="actual-content">
           Znacznik &lt;img&gt; jest znacznikiem pojedyńczym liniowym, semantycznym. Każdy znacznik &lt;img&gt;
@@ -96,18 +98,18 @@
   Umieszczanie obrazu jako link
 </h4>
 <p class="actual-content">
-Aby obrazek stał sie linkiem musimy umieścić w znaczniku &lt;a&gt; znacznik &lt;img&gt; w ten sposób:
+Aby obrazek stał sie linkiem musimy umieścić w znaczniku &lt;a&gt; znacznik &lt;img&gt; w ten sposób:</p>
 <pre class="lang-html"><code>&lt;a href="https://www.w3schools.com/tags/tag_img.asp"&gt;&lt;img src="../Obrazy/obrazki/w3schools.png" alt="w3schols link"&gt;&lt;/a&gt;</code></pre>
-</p>
+
 <p class="actual-content"> A to link w formie obrazka do strony w3schools o znaczniku img</p>
 <a href="https://www.w3schools.com/tags/tag_img.asp"><img src="../Obrazy/obrazki/w3schools.png" alt="w3schols link" class="content-image"></a>
-<h5 class="headings"id="where">Responsywność obrazka</h5>
+<h5 class="headings" id="where">Responsywność obrazka</h5>
 <p class="actual-content">Responsywność obrazka to ważna część w budowie strony, aby uniknąc przepełnień szerokości ekranu. Aby obrazek był responsywny,
-   trzeba nadać mu wartości w atrybucie style: max-width: oraz aspect-ratio: tak jak pokazano w kodzie poniżej:
-  <pre class="lang-html"><code>&lt;img src=&quot;ścieżka/do/obrazka&quot; alt=&quot;obrazek pokazowy&quot; style=&quot;max-width: 40vw; aspect-ratio: 2/1;&quot;&gt;</code></pre></p>
+   trzeba nadać mu wartości w atrybucie style: max-width: oraz aspect-ratio: tak jak pokazano w kodzie poniżej:</p>
+  <pre class="lang-html"><code>&lt;img src=&quot;ścieżka/do/obrazka&quot; alt=&quot;obrazek pokazowy&quot; style=&quot;max-width: 40vw; aspect-ratio: 2/1;&quot;&gt;</code></pre>
 <p class="actual-content"> Rozbijmy to na mniejsze części, atrybut style tworzy wewnętrzny arkusz stylów, w którym mówimy że szerokość obrazka może wynosić maksymalnie 40% szerokości ekranu,
    a proporcja jego szerokości do wysokości ma wynieść 2/1</p>
-  <h6 class="headings" id="basics"></h6>
+  
   <p class="actual-content"></p>
 <p class="actual-content">
 </p>

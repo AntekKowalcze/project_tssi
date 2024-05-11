@@ -343,7 +343,7 @@ footer a:hover {
 
   /* line under header */
   .darker {
-    background-color: d3d3d3;
+    background-color: #d3d3d3;
     position: relative;
     top: 2.8em;
     margin: 0;
@@ -587,7 +587,7 @@ aspect-ratio: 3/4;
     display: flex;
     color: white;
     justify-content: end;
-    background-color: none;
+    background: none;
   }
 
   .fun-fact {

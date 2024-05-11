@@ -77,16 +77,20 @@
 
         <h3>
         Tabele są potrzebnym elementem HTMl, do tworzenia formularzy czy układów danych elementów na stronie.</h3>
-        <ul class="contents">
-          <p class="actual-content">Spis treści</p>
+              
+        <div class="contents">
+          <p class="actual-content" id="no-style">Spis treści</p>
+          <ul>
+            
           <li><a href="#what-is">Potrzebne znaczniki</a></li>
           <li><a href="#why">Jak stworzyć prostą tabele</a></li>
           <li><a href="#where">Jak stworzyć tabele zagnieżdżone w html</a></li>
           <li><a href="#basics">Nietypowe układy tabel</a></li>
-        </ul>
+          </ul>
+        </div>
         <p class="headings">Potrzebne znaczniki</p>
         <p id="what-is" class="actual-content">
-        Znaczniki jakie są potrzebne do tworzenia tabel w HTML to:
+        Znaczniki jakie są potrzebne do tworzenia tabel w HTML to:</p>
         <pre class="lang-html"><code>1.&lt;table&gt;
 2.&lt;caption&gt;
 3. &lt;thead&gt;
@@ -95,7 +99,7 @@
 6. &lt;tr&gt;
 7. &lt;th&gt;
 8. &lt;td&gt;</code></pre>
-        </p>
+        
         <p class="actual-content">
           &lt;table&gt;: Definiuje samą tabelę.<br>
 &lt;caption&gt;: Opcjonalny tag, kt&oacute;ry definiuje tytuł lub opis tabeli.<br>
@@ -110,7 +114,7 @@
 <h4 class="headings"  id="why">
  Jak stworzyć prostą tabelę
 </h4>
-<p class="actual-content">
+
 <pre class="lang-html"><code>&lt;table border=&quot;1&quot;&gt;
     &lt;caption&gt;Przykładowa tabela&lt;/caption&gt;
     &lt;thead&gt;
@@ -134,14 +138,13 @@
     &lt;/tbody&gt;
 &lt;/table&gt;
 </code></pre>
-</p>
+
 <p class="actual-content">
   Aby tabela się wyświetliła używamy atrybutu border="1" w znaczniku table. W tym przykładzie tabela zawiera trzy kolumny (Imię, Nazwisko, Wiek) i dwie wiersze z danymi. Pierwszy wiersz jest wierszem nagłówka. A kolejne dwa ciałem tabeli.<br>A oto efekt:
 </p>
 <img src="../Obrazy/Tabela/tabela.png" class="content-image" alt="widok tabeli">
-<h5 class="headings"id="where">Jak stworzyć tabele zagnieżdżone w html</h5>
-<p class="actual-content">
-  <pre class="lang-html"><code> &lt;td&gt
+<h5 class="headings" id="where">Jak stworzyć tabele zagnieżdżone w html</h5>
+  <pre class="lang-html"><code> &lt;td&gt;
 &lt;table border=&quot;1&quot;&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -165,12 +168,12 @@
   &lt;/table&gt;
   &lt;/td&gt;
   </code></pre> 
-</p>
+
 <p class="actual-content"> Aby wykonać tabelę zagnieżdżoną poprostu umieszczamy kolejną tabele w jednej z komórek pierwszej tabeli.<br>Efekt:</p>
 <img src="../Obrazy/Tabela/tabela-zagnieżdżona.png" alt="zagnieżdżona tabela"  class="bigger-image"> 
   <h6 class="headings" id="basics"> Nietypowe układy tabel</h6>
   <p class="actual-content">Komórki w tabelach mogą przyjmować różne formy, w tej części artykułu dowiesz się jak używać atrybutów rowspan i colspan. Oto przykładowa tabela z tymi atrybutami:
-    <pre class="lang-html"><code>&lt;table border=&quot;1&quot;&gt;
+  </p>  <pre class="lang-html"><code>&lt;table border=&quot;1&quot;&gt;
  &lt;caption&gt;Przykładowa tabela z atrybutami rowspan i colspan&lt;/caption&gt;
   &lt;thead&gt;
    &lt;tr&gt;
@@ -197,7 +200,7 @@
    &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-  </p>
+  
 <p class="actual-content">
 Oto efekt: 
 

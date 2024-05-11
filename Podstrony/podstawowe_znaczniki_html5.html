@@ -77,13 +77,16 @@
         </h3>
         <blockquote>https://how2html.pl/wp-content/uploads/2014/08/znacznik-otwarcia-html1.jpg</blockquote>
         <img id="image" src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" alt="widok znacznika"/>
-        <ul class="contents">
-          <p class="actual-content">Spis treści</p>
-          <li><a href="#what-is">Podział znaczników</a></li>
+        <div class="contents">
+          <p class="actual-content" id="no-style">Spis treści</p>
+          <ul>
+            <li><a href="#what-is">Podział znaczników</a></li>
           <li><a href="#why">Użycie znaczników</a></li>
           <li><a href="#where">Podstawowe znaczniki blokowe</a></li>
           <li><a href="#basics">Podstawowe znaczniki liniowe</a></li>
-        </ul>
+          </ul>
+        </div>
+      
         <p class="headings">Podział znaczników</p>
         <p id="what-is" class="actual-content">
         Znaczniki dzielą się na dwa typy, znaczniki blokowe np. &lt;div&gt; i znaczniki liniowe np. &lt;a&gt;, znaczniki blokowe 
@@ -97,7 +100,7 @@
   Użycie znaczników 
 </h4>
 <p class="actual-content">
-  Cały HTML opiera się na odpowiednim używaniu znaczników, więc poznajmy kilka zasad, które należy stosować:
+  Cały HTML opiera się na odpowiednim używaniu znaczników, więc poznajmy kilka zasad, które należy stosować:</p>
   <ul class="content-list">
     <li>Nie krzyżuj znaczników
     <pre class="lang-html"><code>&lt;a&gt;&lt;b&gt;&lt;/a&gt;&lt;/b&gt; TAK NIE WOLNO</code></pre>
@@ -114,20 +117,20 @@
           <pre class="lang-html"><code>&lt;a src=&quot;tresc&quot;&gt;&lt;/a&gt;TAK TRZEBA
 &lt;a src=treść&gt;&lt;/a&gt; TAK NIE WOLNO</code></pre>
           </li>
-          <li>W treści strony stosuj encje zamiast znaków specjalnych(< = &quot& lt;&quot) tablica encji <a href="https://symbl.cc/pl/html-entities/">link</a>
-            <pre class="lang-html"><code><p>&lt;znacznik&gt; wypisanie znacznika używając encji
+          <li>W treści strony stosuj encje zamiast znaków specjalnych(&lt; = &quot; &amp;lt;&quot;) tablica encji <a href="https://symbl.cc/pl/html-entities/">link</a>
+            <pre class="lang-html"><code>&lt;znacznik&gt; wypisanie znacznika używając encji
 nie można używać normalnych znaków mniejszości i większości,
 ponieważ parser może uznać to za znacznik do tworzenia treści na stronie!
-            </p></code></pre>
+            </code></pre>
             </li>
   </ul>
-</p>
-<h5 class="headings"id="where">
+
+<h5 class="headings" id="where">
   Podstawowe znaczniki blokowe
 </h5>
 <p class="actual-content">
   Podstawowe znaczniki blokowe to: 
-  <pre class="lang-html"><code>1. &lt;div&gt;
+</p><pre class="lang-html"><code>1. &lt;div&gt;
 2. &lt;p&gt;
 3. &lt;h1&gt; - &lt;h6&gt;
 4. &lt;header&gt;
@@ -137,7 +140,7 @@ ponieważ parser może uznać to za znacznik do tworzenia treści na stronie!
 8. &lt;section&gt;
 9. &lt;aside&gt;
 10. &lt;main&gt;
-</code></pre></p>
+</code></pre>
 <p class="actual-content">&lt;div&gt;: Jest to uniwersalny kontener blokowy, kt&oacute;ry służy do grupowania innych element&oacute;w i tworzenia sekcji na stronie.<br>
 
   &lt;p&gt;: Oznacza akapit tekstu.<br>
@@ -160,7 +163,7 @@ ponieważ parser może uznać to za znacznik do tworzenia treści na stronie!
 </p>
   <h6 class="headings" id="basics">Podstawowe znaczniki liniowe</h6>
   <p class="actual-content">Podstawowe znaczniki liniowe to: 
-    <pre class="lang-html"><code>1. &lt;span&gt;
+  </p><pre class="lang-html"><code>1. &lt;span&gt;
 2. &lt;a&gt;
 3. &lt;strong&gt;
 4. &lt;em&gt;
@@ -170,7 +173,7 @@ ponieważ parser może uznać to za znacznik do tworzenia treści na stronie!
 8. &lt;input&gt;
 9. &lt;label&gt;
 10. &lt;button&gt;</code></pre>
-  </p>
+  
 <p class="actual-content">
   &lt;span&gt;: Jest to znacznik używany do grupowania element&oacute;w w celu zastosowania wsp&oacute;lnych styl&oacute;w lub manipulacji za pomocą JavaScriptu, nie wpływając na strukturę dokumentu.<br>
 
