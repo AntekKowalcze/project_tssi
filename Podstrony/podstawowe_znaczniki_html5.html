@@ -71,36 +71,126 @@
       <main>
         <div class="image-and-h2">
           <h2>Podstawowe znaczniki HTML</h2>
-          <blockquote>https://how2html.pl/wp-content/uploads/2014/08/znacznik-otwarcia-html1.jpg</blockquote>
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
         </div>
-
         <h3>
           Znacznik html to podstawowy element języka. Dzieli się je na znaczniki liniowe i blokowe.
         </h3>
+        <blockquote>https://how2html.pl/wp-content/uploads/2014/08/znacznik-otwarcia-html1.jpg</blockquote>
+        <img id="image" src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" alt="widok znacznika"/>
         <ul class="contents">
           <p class="actual-content">Spis treści</p>
           <li><a href="#what-is">Podział znaczników</a></li>
           <li><a href="#why">Użycie znaczników</a></li>
-          <li><a href="#where">Podstawowe znaczniki liniowe</a></li>
-          <li><a href="#basics">Podstawowe znaczniki blokowe</a></li>
+          <li><a href="#where">Podstawowe znaczniki blokowe</a></li>
+          <li><a href="#basics">Podstawowe znaczniki liniowe</a></li>
         </ul>
         <p class="headings">Podział znaczników</p>
         <p id="what-is" class="actual-content">
-        
+        Znaczniki dzielą się na dwa typy, znaczniki blokowe np. &lt;div&gt; i znaczniki liniowe np. &lt;a&gt;, znaczniki blokowe 
+        służą do organizacji kontentu na stronie, zajmują maksymalną szerokość i wysokość większą o jedną linie u góry i na dole, natomiast znaczniki liniowe służą do umieszczania w nich zawartości (oczywiście z pewnymi wyjątkami w obu przypadkach) i zajmują tylko tyle miejsca ile w nich jest treści.
+        Znaczniki HTML dzielą się także na pojedyńcze i podwójne, czyli na takie jak np &lt;img&gt; , &lt;aside&gt; &lt;/aside&gt;, główna różnica, to sposób zamykania tagów, pojedyńczych nie trzeba zamykać, a podwójne mają swój końcowy znacznik ze znakiem /. 
+        Oznacza to że w znacznikach pojedyńczyk nie możemy umieszczać dodatkowiej treści, bo same w sobie ją zawierają, a w znacznikach podwójnych można umieszczać treść.
+        Kolejny podział jest na znaczniki semantyczne i nie semantyczne. Tu sprawa jest bardzo prosta, znaczniki semantyczne w swojej nazwie mają określone co robią, w przeciwieństwie do nie semantycznych, a ich przykłady to &lt;table&gt; &lt;article&gt;, &lt;b&gt; 
         </p>
       
 <h4 class="headings"  id="why">
-  Użycie znaczników
+  Użycie znaczników 
 </h4>
 <p class="actual-content">
-
+  Cały HTML opiera się na odpowiednim używaniu znaczników, więc poznajmy kilka zasad, które należy stosować:
+  <ul class="content-list">
+    <li>Nie krzyżuj znaczników
+    <pre class="lang-html"><code>&lt;a&gt;&lt;b&gt;&lt;/a&gt;&lt;/b&gt; TAK NIE WOLNO</code></pre>
+    </li>
+    <li>Zamykaj wszystkie znaczniki kontenerowe
+      <pre class="lang-html"><code>&lt;div&gt;&lt;/div&gt;TAK TRZEBA
+&lt;div&gt; TAK NIE WOLNO</code></pre>
+      </li>
+      <li>Pisząc znaczniki i ich atrybuty zawsze używaj małych liter
+        <pre class="lang-html"><code>&lt;a src=&quot;tresc&quot;&gt;&lt;/a&gt;TAK TRZEBA
+&lt;A Src=&quot;TREŚĆ&quot;&gt;&lt;/A&gt; TAK NIE WOLNO</code></pre>
+        </li>
+        <li>Używaj "" do wszystkich atrybutów:
+          <pre class="lang-html"><code>&lt;a src=&quot;tresc&quot;&gt;&lt;/a&gt;TAK TRZEBA
+&lt;a src=treść&gt;&lt;/a&gt; TAK NIE WOLNO</code></pre>
+          </li>
+          <li>W treści strony stosuj encje zamiast znaków specjalnych(< = &quot& lt;&quot) tablica encji <a href="https://symbl.cc/pl/html-entities/">link</a>
+            <pre class="lang-html"><code><p>&lt;znacznik&gt; wypisanie znacznika używając encji
+nie można używać normalnych znaków mniejszości i większości,
+ponieważ parser może uznać to za znacznik do tworzenia treści na stronie!
+            </p></code></pre>
+            </li>
+  </ul>
 </p>
-<h5 class="headings"id="where">Użycie znaczników</h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics">Podstawowe znaczniki liniowe</h6>
-  <p class="actual-content"></p>
+<h5 class="headings"id="where">
+  Podstawowe znaczniki blokowe
+</h5>
 <p class="actual-content">
+  Podstawowe znaczniki blokowe to: 
+  <pre class="lang-html"><code>1. &lt;div&gt;
+2. &lt;p&gt;
+3. &lt;h1&gt; - &lt;h6&gt;
+4. &lt;header&gt;
+5. &lt;footer&gt;
+6. &lt;nav&gt;
+7. &lt;article&gt;
+8. &lt;section&gt;
+9. &lt;aside&gt;
+10. &lt;main&gt;
+</code></pre></p>
+<p class="actual-content">&lt;div&gt;: Jest to uniwersalny kontener blokowy, kt&oacute;ry służy do grupowania innych element&oacute;w i tworzenia sekcji na stronie.<br>
+
+  &lt;p&gt;: Oznacza akapit tekstu.<br>
+  
+  &lt;h1&gt; - &lt;h6&gt;: Oznaczają nagł&oacute;wki od najwyższego poziomu (najważniejszy) do najniższego poziomu (najmniej ważny). Przykładowo, &lt;h1&gt; to nagł&oacute;wek pierwszego poziomu, a &lt;h6&gt; to nagł&oacute;wek sz&oacute;stego poziomu.<br>
+  
+  &lt;header&gt;: Reprezentuje nagł&oacute;wek strony lub sekcji.<br>
+  
+  &lt;footer&gt;: Oznacza stopkę strony lub sekcji.<br>
+  
+  &lt;nav&gt;: Służy do oznaczania sekcji nawigacyjnej.<br>
+  
+  &lt;article&gt;: Oznacza niezależny fragment treści, na przykład pojedynczy post na blogu lub artykuł.<br>
+  
+  &lt;section&gt;: Reprezentuje sekcję na stronie, kt&oacute;ra może zawierać powiązane treści, takie jak grupa artykuł&oacute;w lub element&oacute;w.<br>
+  
+  &lt;aside&gt;: Oznacza treść poboczną, kt&oacute;ra jest związana z zawartością znajdującą się wok&oacute;ł niej, ale może być r&oacute;wnież niezależna.<br>
+  
+  &lt;main&gt;: Oznacza gł&oacute;wną zawartość strony, kt&oacute;ra nie jest stopką, nagł&oacute;wkiem, ani treścią poboczną.<br>
+</p>
+  <h6 class="headings" id="basics">Podstawowe znaczniki liniowe</h6>
+  <p class="actual-content">Podstawowe znaczniki liniowe to: 
+    <pre class="lang-html"><code>1. &lt;span&gt;
+2. &lt;a&gt;
+3. &lt;strong&gt;
+4. &lt;em&gt;
+5. &lt;br&gt;
+6. &lt;hr&gt;
+7. &lt;img&gt;
+8. &lt;input&gt;
+9. &lt;label&gt;
+10. &lt;button&gt;</code></pre>
+  </p>
+<p class="actual-content">
+  &lt;span&gt;: Jest to znacznik używany do grupowania element&oacute;w w celu zastosowania wsp&oacute;lnych styl&oacute;w lub manipulacji za pomocą JavaScriptu, nie wpływając na strukturę dokumentu.<br>
+
+&lt;a&gt;: Służy do tworzenia odnośnik&oacute;w (link&oacute;w) do innych stron internetowych, dokument&oacute;w lub lokalizacji w bieżącej stronie.<br>
+
+&lt;strong&gt;: Oznacza tekst jako ważny lub wyr&oacute;żniony, zazwyczaj powoduje jego pogrubienie.<br>
+
+&lt;em&gt;: Oznacza tekst jako ważny lub akcentowany, zazwyczaj powoduje jego kursywę.<br>
+
+&lt;br&gt;: Tworzy przejście do nowej linii w tekście bez wprowadzania nowego bloku, jak to robi &lt;p&gt;.<br>
+
+&lt;hr&gt;: Tworzy poziomą linię (horyzontalną), kt&oacute;ra służy do oddzielenia zawartości na stronie.<br>
+
+&lt;img&gt;: Wstawia obraz na stronę.<br>
+
+&lt;input&gt;: Umożliwia użytkownikom wprowadzanie danych poprzez formularze. Może przyjmować r&oacute;żne typy, takie jak tekst, przycisk, pole wyboru itp.<br>
+
+&lt;label&gt;: Służy do powiązania opisu z elementem formularza, co ułatwia korzystanie z formularzy dla użytkownik&oacute;w.<br>
+
+&lt;button&gt;: Tworzy przycisk, kt&oacute;ry może być kliknięty w celu wykonania określonej akcji, takiej jak wysyłanie formularza lub uruchamianie skryptu JavaScript.<br>
 </p>
 <div id="button-next">
   <a id="next" href="../Podstrony/listy.html">NASTĘPNY ARTYKUŁ</a>
