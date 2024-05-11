@@ -70,37 +70,141 @@
       <div class="path"></div>
       <main>
         <div class="image-and-h2">
-          <h2>HEADING1</h2>
+          <h2>Tabele HTML</h2>
           
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          <img src="../Obrazy/Tabela/table.png" alt="tabele" />
         </div>
 
         <h3>
-        HEADING2
+        Tabele są potrzebnym elementem HTMl, do tworzenia formularzy czy układów danych elementów na stronie.
         <ul class="contents">
           <p class="actual-content">Spis treści</p>
-          <li><a href="#what-is"></a></li>
-          <li><a href="#why"></a></li>
-          <li><a href="#where"></a></li>
-          <li><a href="#basics"></a></li>
+          <li><a href="#what-is">Potrzebne znaczniki</a></li>
+          <li><a href="#why">Jak stworzyć prostą tabele</a></li>
+          <li><a href="#where">Jak stworzyć tabele zagnieżdżone w html</a></li>
+          <li><a href="#basics">Nietypowe układy tabel</a></li>
         </ul>
-        <p class="headings"></p>
+        <p class="headings">Potrzebne znaczniki</p>
         <p id="what-is" class="actual-content">
-        
+        Znaczniki jakie są potrzebne do tworzenia tabel w HTML to:
+        <pre class="lang-html"><code>1.&lt;table&gt;
+2.&lt;caption&gt;
+3. &lt;thead&gt;
+4. &lt;tbody&gt;
+5. &lt;tfoot&gt;
+6. &lt;tr&gt;
+7. &lt;th&gt;
+8. &lt;td&gt;</code></pre>
+        </p>
+        <p class="actual-content">
+          &lt;table&gt;: Definiuje samą tabelę.<br>
+&lt;caption&gt;: Opcjonalny tag, kt&oacute;ry definiuje tytuł lub opis tabeli.<br>
+&lt;thead&gt;: Grupa wierszy definiujących nagł&oacute;wki tabeli.<br>
+&lt;tbody&gt;: Grupa wierszy definiujących gł&oacute;wne dane tabeli.<br>
+&lt;tfoot&gt;: Grupa wierszy definiujących stopkę tabeli.<br>
+&lt;tr&gt;: Definiuje wiersz tabeli.<br>
+&lt;th&gt;: Definiuje nagł&oacute;wek kom&oacute;rki tabeli (najczęściej używane w pierwszym wierszu lub w pierwszej kolumnie).<br>
+&lt;td&gt;: Definiuje kom&oacute;rkę danych tabeli.<br>
         </p>
       
 <h4 class="headings"  id="why">
- 
+ Jak stworzyć prostą tabelę
 </h4>
 <p class="actual-content">
+<pre class="lang-html"><code>&lt;table border=&quot;1&quot;&gt;
+    &lt;caption&gt;Przykładowa tabela&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Imię&lt;/th&gt;
+            &lt;th&gt;Nazwisko&lt;/th&gt;
+            &lt;th&gt;Wiek&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Jan&lt;/td&gt;
+            &lt;td&gt;Kowalski&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Anna&lt;/td&gt;
+            &lt;td&gt;Nowak&lt;/td&gt;
+            &lt;td&gt;28&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+</p>
+<p class="actual-content">
+  Aby tabela się wyświetliła używamy atrybutu border="1" w znaczniku table. W tym przykładzie tabela zawiera trzy kolumny (Imię, Nazwisko, Wiek) i dwie wiersze z danymi. Pierwszy wiersz jest wierszem nagłówka. A kolejne dwa ciałem tabeli.<br>A oto efekt:
+</p>
+<img src="../Obrazy/Tabela/tabela.png" class="content-image" alt="widok tabeli">
+<h5 class="headings"id="where">Jak stworzyć tabele zagnieżdżone w html</h5>
+<p class="actual-content">
+  <pre class="lang-html"><code> &lt;td&gt
+&lt;table border=&quot;1&quot;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Kolor&lt;/th&gt;
+    &lt;th&gt;Marka&lt;/th&gt;
+    &lt;th&gt;Rok produkcji&lt;/th&gt;
+   &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+     &lt;td&gt;Czerwony&lt;/td&gt;
+     &lt;td&gt;Ford&lt;/td&gt;
+     &lt;td&gt;2018&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+     &lt;td&gt;Niebieski&lt;/td&gt;
+     &lt;td&gt;Toyota&lt;/td&gt;
+     &lt;td&gt;2020&lt;/td&gt;
+    &lt;/tr&gt;
+      &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;/td&gt;
+  </code></pre> 
+</p>
+<p class="actual-content"> Aby wykonać tabelę zagnieżdżoną poprostu umieszczamy kolejną tabele w jednej z komórek pierwszej tabeli.<br>Efekt:</p>
+<img src="../Obrazy/Tabela/tabela-zagnieżdżona.png" alt="zagnieżdżona tabela"  class="bigger-image"> 
+  <h6 class="headings" id="basics"> Nietypowe układy tabel</h6>
+  <p class="actual-content">Komórki w tabelach mogą przyjmować różne formy, w tej części artykułu dowiesz się jak używać atrybutów rowspan i colspan. Oto przykładowa tabela z tymi atrybutami:
+    <pre class="lang-html"><code>&lt;table border=&quot;1&quot;&gt;
+ &lt;caption&gt;Przykładowa tabela z atrybutami rowspan i colspan&lt;/caption&gt;
+  &lt;thead&gt;
+   &lt;tr&gt;
+    &lt;th rowspan=&quot;2&quot;&gt;Kod produktu&lt;/th&gt;
+    &lt;th colspan=&quot;2&quot;&gt;Dane produktu&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;th&gt;Nazwa&lt;/th&gt;
+    &lt;th&gt;Cena&lt;/th&gt;
+   &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td&gt;001&lt;/td&gt;
+    &lt;td rowspan=&quot;2&quot;&gt;Telefon&lt;/td&gt;
+    &lt;td&gt;$500&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;002&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td colspan=&quot;3&quot;&gt;Łącznie: 2 produkty&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+  </p>
+<p class="actual-content">
+Oto efekt: 
 
 </p>
-<h5 class="headings"id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
-<p class="actual-content">
-</p>
+<img src="../Obrazy/Tabela/tabele-rowspan-colspan-efekt.png" alt="tabela z atrybutami colspan i rowspan" class="content-image">
+<p class="actual-content">W tej tabeli użyliśmy atrybutów "rowspan" i "colspan", aby rozciągnać wybrane komórki na daną szerokość. 
+  Atrybut rowspan określa na szerokość ilu kolumn komórka będzie rozciągnięta. A atrybut colspan określa na jaką ilość wierszy komórka będzie rozciągnięta.</p>
 <div id="button-next">
   <a id="next" href="../Podstrony/obrazki.html">NASTĘPNY ARTYKUŁ</a>
 </div>
