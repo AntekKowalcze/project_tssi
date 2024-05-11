@@ -1,0 +1,29 @@
+.image-and-h2 img{
+  aspect-ratio: 1/1;
+  }
+
+.content-image{
+  max-width: 40vw;
+}
+@media (min-width: 769px) {
+  
+  .image-and-h2 img{
+  
+    max-width: 30vw;
+    }
+ 
+}
+@media (min-width: 770px) {
+  
+  .image-and-h2 img{
+    max-width: 8vw;
+    }
+ 
+}
+@media (min-width: 1201px) {
+  
+code, pre{
+max-width: 60vw;
+}
+ 
+}
