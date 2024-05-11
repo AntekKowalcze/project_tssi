@@ -70,37 +70,69 @@
       <div class="path"></div>
       <main>
         <div class="image-and-h2">
-          <h2>HEADING1</h2>
-          
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          <h2>Listy HTML</h2>
+          <blockquote>https://juniortoexpert.com/wp-content/webp-express/webp-images/uploads/html-listing-tags.png.webp</blockquote>
+          <img src="../Obrazy/listy/listy.png" alt="widok listy" id="list-img">
         </div>
 
         <h3>
-        HEADING2
+        Listy są w brew pozorom bardzo ważnym elementem języka, który należy dobrze opanować, nie służa tylko do tworzenia list, ale także np. nawigacji na stronie.
         <ul class="contents">
           <p class="actual-content">Spis treści</p>
-          <li><a href="#what-is"></a></li>
-          <li><a href="#why"></a></li>
-          <li><a href="#where"></a></li>
-          <li><a href="#basics"></a></li>
+          <li><a href="#what-is">Potrzebne znaczniki</a></li>
+          <li><a href="#why">Jak zrobić prostą listę</a></li>
+          <li><a href="#where">Jak zrobić listę zagnieżdzoną</a></li>
+          
         </ul>
-        <p class="headings"></p>
+        <p class="headings">Potrzebne znaczniki</p>
         <p id="what-is" class="actual-content">
-        
-        </p>
+        <pre class="lang-html"><code>&lt;ul&gt; - znacznik do tworzenia listy nie uporządkowanej (ang. unordered list) - idealny przykład znacznika kontenerowego
+
+&lt;li&gt; - znacznik do tworzenia elementów listy (ang. list item)
+
+&lt;ol&gt; - znacznik do tworzenia listy uporządkowanej (ang. ordered list)
+
+&lt;dl&gt; - znacznik do tworzenia listy definicji (ang. definition list)
+
+&lt;dt&gt; - znacznik do tworzenia terminu definicji (ang. definition term)
+
+&lt;dd&gt; - znacznik do tworzenia opisu definicji(ang. definition description)</code></pre>
+    </p>
+    <p class="actual-content">Głównie używany jest znacznik &lt;ul&gt;, używa się go jako znacznika domyślnego, którego później stylizuje się css-em, 
+      znacznika &lt;ol&gt; używa się do tworzenia list zagnieżdzonych, czyli list w elementach &lt;li&gt;, Natomiast najrzadziej używanymi listami są listy definicji.</p>
       
 <h4 class="headings"  id="why">
- 
+  Jak zrobić prostą listę
 </h4>
 <p class="actual-content">
-
+  Aby utworzyć listę używamy znacznika &lt;ul&gt;, a w nim znacznik&oacute;w &lt;li&gt;, tak jak w zamieszczonym kodzie.  
+  <pre class="lang-html"><code>
+&lt;ul&gt;
+  &lt;li&gt;Pierwszy element listy&lt;/li&gt;
+  &lt;li&gt;Drugi element listy&lt;/li&gt;
+  &lt;li&gt;Trzeci element listy&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 </p>
-<h5 class="headings"id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
 <p class="actual-content">
+  Otrzymujemy coś takiego:
 </p>
+<img class="effect" src="../Obrazy/listy/listy-efektpng.png" alt="normalna lista">
+<h5 class="headings"id="where">Jak zrobić listę zagnieżdżoną</h5>
+<p class="actual-content">Aby stworzyć listę zagnieżdżona umieszczamy znacznik &lt;ol&gt; w jednym ze znaczników &lt;li&gt; listy.
+  <pre class="lang-html"><code>&lt;ul&gt;
+    &lt;li&gt;Pierwszy element listy&lt;/li&gt;
+    &lt;li&gt;
+     &lt;ol&gt; 
+       &lt;li&gt; Pierwszy element listy zagnieżdżonej&lt;/li&gt;
+       &lt;li&gt;Drugi element listy zagnieżdżonej &lt;/li&gt;
+       &lt;li&gt; Trzeci element listy zagnieżdżonej&lt;/li&gt;
+     &lt;/ol&gt;&lt;/li&gt;
+    &lt;li&gt;Trzeci element listy&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</p>
+<p class="actual-content"> Efekt:</p>
+<img src="../Obrazy/listy/lista-zagnieżdżona.png" alt="lista zagnieżdżona">
+
 <div id="button-next">
   <a id="next" href="../Podstrony/tabele.html">NASTĘPNY ARTYKUŁ</a>
 </div>

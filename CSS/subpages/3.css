@@ -1,0 +1,19 @@
+
+blockquote{
+  display: none;
+}
+#list-img{
+  max-width: 30vw;
+  width: 15vw;
+  aspect-ratio: 4/3;
+}
+@media (max-width:769px) {
+ #list-img{
+  width: 40vw; 
+}
+.effect{
+  width: 50vw ;
+  
+  
+}
+}
