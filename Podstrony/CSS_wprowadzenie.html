@@ -70,39 +70,75 @@
       <div class="path"></div>
       <main>
         <div class="image-and-h2">
-          <h2>HEADING1</h2>
+          <h2>Wprowadzenie do CSS</h2>
           
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          <img src="../Obrazy/CSS_wprowadzenie/css.png" alt="logo css"  />
         </div>
 
-        <h3> HEADING2</h3>
+        <h3>CSS (Cascading style sheets) czyli kaskadowe arkusze stylów to narzędzie, które pozwala nam widzieć Internet piękniejszym.
+           To właśnie ono daje kolory Internetowi, dlatego warto jest się z nim zapoznać.</h3>
        
         <div class="contents">
           <p class="actual-content" id="no-style">Spis treści</p>
           <ul>
-            <li><a href="#what-is"> link</a></li>
-            <li><a href="#why"></a></li>
-            <li><a href="#where"></a></li>
-            <li><a href="#basics"></a></li>
+            <li><a href="#what-is">Co to jest CSS. Podział arkuszy.</a></li>
+            <li><a href="#why">Jak działa CSS</a></li>
+            <li><a href="#where">Podstawowe właściwości css</a></li>
           </ul>
         </div>
-        <p class="headings"></p>
+        <p class="headings">Co to jest CSS. Podział arkuszy.</p>
         <p id="what-is" class="actual-content">
-        
-        </p>
+          CSS, to język stosowany do opisu prezentacji dokumentów HTML oraz XML. Pozwala na kontrolę wyglądu i układu elementów na stronie internetowej, definiując m.in. kolory, czcionki, odstępy i pozycje elementów. 
+          CSS zapewnia oddzielenie treści strony od jej formy, co ułatwia zarządzanie i zmiany w wyglądzie witryny. Arkusze stylów dzielą się na: wewnętrzne arkusze stylów, znajdujące się w atrybucie style="" w znacznikach,
+          osadzone arkusze stylów znajdują się w znaczniku &lt;style&gt; w części dokumentu head oraz zewnętrze arkusze stylów znajdujące się w osobnym pliku .css, aby dołączyć go do pliku html musimy użyć znacznika &lt;link&gt; tak ,jak w kodzie poniżej:</p>
+        <pre class="lang-html"><code>&lt;link rel="stylesheet" type="text/css" href="ścieżka/do/pliku/css" /&gt;</code></pre>
       
 <h4 class="headings"  id="why">
- 
+  Jak działa CSS
 </h4>
 <p class="actual-content">
+CSS składa się z selektora - czyli elementu wskazującego daną część elementu html, może to być nazwa znacznika np. a, 
+code itp. albo nazwa klasy .class czy id #id. Są też inne metody wskazywania elementów, aby się o nich dowiedzieć odwiedź 
+<a href="https://www.w3schools.com/cssref/css_selectors.php">ten artykuł</a>. następnie znajdują się nawiasy klamrowe i w śroku nawiasów właściwość: wartosć;
+W pliku wygląda to tak:</p>
+<pre class="lang-css"><code>.class {
+  width:20px;
+}
+#id{
+height: 20px;
+}</code></pre>
+<p class="actual-content">Właściwość width - określa szerokość elementów należących do klasy class na 20px,
+   a height określa wysokość elementu z id id na 20px</p>
+<h5 class="headings" id="where">Podstawowe właściwości CSS</h5>
+<p class="actual-content">Pokażmy je na przykładzie. Tu mamy potrzebny html:</p>
+<pre class="lang-html"><code>&lt;a href=&quot;#&quot;&gt;Przykład&lt;/a&gt;</code></pre>
+<p class="actual-content">A tu potrzebny css.</p>
+<pre class="lang-css"><code>a{
+  color:red;
+  font-size:2rem;
+  font-family:Arial;
+  background-color:black;
+  margin: 10px;
+  padding:5px;
+  border: 2px dotted blue;
+  width: 50px;
+  height: 30px;
+  display: block;
+}</code></pre>
+  <p class="actual-content">A wygląda to tak:</p>
+  <img src="../Obrazy/CSS_wprowadzenie/a.png" alt="wygląd naszego a po stylizacji" class="effect-img">
+  <p class="actual-content">Aby dowiedzieć się więcej o znacznikach, kliknij we właściwość w kodzie powyżej, tu omówimy podstawy:
+    color: Określa kolor tekstu.<br>
+    font-size: Ustawia rozmiar czcionki.<br>
+    font-family: Definiuje rodzaj czcionki.<br>
+    background-color: Ustawia kolor tła elementu.<br>
+    margin: Określa marginesy wokół elementu.<br>
+    padding: Określa wewnętrzne odstępy wokół zawartości elementu.<br>
+    border: Tworzy obramowanie wokół elementu.<br>
+    width: Określa szerokość elementu.<br>
+    height: Ustawia wysokość elementu.<br>
+    display: Kontroluje sposób wyświetlania elementu w dokumencie.</p>
 
-</p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
-<p class="actual-content">
-</p>
 <div id="button-next">
   <a id="next" href="../Podstrony/uklady_stron.html">NASTĘPNY ARTYKUŁ</a>
 </div>
