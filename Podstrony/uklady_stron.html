@@ -70,40 +70,199 @@
       <div class="path"></div>
       <main>
         <div class="image-and-h2">
-          <h2>HEADING1</h2>
-          
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          <h2>Układy stron</h2>
+        <img src="../Obrazy/Uklady_stron/flex.jpg" alt="flexbox image"> 
         </div>
 
-        <h3> HEADING2</h3>
+        <h3> Każda strona powinna posiadać swój układ, nagłówek, stopkę część główną. 
+          W tym artykule dowiesz się jakie układy są najpopularniejsze i jak wykonać je używając flexboxa.</h3>
        
           
         <div class="contents">
           <p class="actual-content" id="no-style">Spis treści</p>
           <ul>
-            <li><a href="#what-is"> link</a></li>
-            <li><a href="#why"></a></li>
-            <li><a href="#where"></a></li>
-            <li><a href="#basics"></a></li>
+            <li><a href="#what-is">Czym jest układ strony?</a></li>
+            <li><a href="#why">Typy uładów stron</a></li>
+            <li><a href="#where">Dlaczego flexbox</a></li>
+            <li><a href="#basics">Najpopularniejsze układy tutorial</a><ol>
+              <li class="actual-content"><a href="#first">header &amp;&amp; main</a></li>
+              <li class="actual-content"><a href="#second">header &amp;&amp; main &amp;&amp; footer</a></li>
+              <li class="actual-content"><a href="#third">header &amp;&amp; main &amp;&amp; aside</a></li>
+              <li class="actual-content"><a href="#fourth">header &amp;&amp; main &amp;&amp; aside &amp;&amp; footer</a></li>
+              <li class="actual-content"><a href="#fifth">header &amp;&amp; main &amp;&amp; aside &amp;&amp; right aside &amp;&amp; footer</a></li>
+            </ol></li>
           </ul>
         </div>
-        <p class="headings"></p>
+        <p class="headings">Czym jest układ strony?</p>
         <p id="what-is" class="actual-content">
-        
-        </p>
+        Układ strony służy organizacji elementów na stronie internetowej. Ukłąd zapewnia, że widok jest uporządkowany, a doświadczenia z zarządzania stroną dużo przyjemniejsze.
+        Dobrze zaprojektowany układ ułatwia nawigację użytkownikom, pomaga w skupieniu uwagi na najważniejszych treściach oraz zwiększa czytelność. Dzięki układom stron można łatwiej 
+        dostosowywać wygląd witryny do różnych urządzeń, co jest kluczowe w responsywności strony.
+        Wpływa również pozytywnie na optymalizację SEO, umożliwiając lepsze indeksowanie przez wyszukiwarki internetowe. 
+        </p>  
       
 <h4 class="headings"  id="why">
- 
+  Typy uładów stron
 </h4>
+<p class="actual-content">Układ składa się z kilku części. Layout zawierające wszystkie z nich wygląda tak: </p>
+<img src="../Obrazy/Uklady_stron/layout.png" alt="layout" class="content-image">
 <p class="actual-content">
+Najpoluraniejsze jest 6 układów stron:</p>
+<ul class="layout">
+  <li class="actual-content">brak układu - main</li>
+  <li class="actual-content">header &amp;&amp; main</li>
+  <li class="actual-content">header &amp;&amp; main &amp;&amp; footer</li>
+  <li class="actual-content">header &amp;&amp; main &amp;&amp; aside</li>
+  <li class="actual-content">header &amp;&amp; main &amp;&amp; aside &amp;&amp; footer</li>
+  <li class="actual-content">header &amp;&amp; main &amp;&amp; aside &amp;&amp; right aside &amp;&amp; footer</li>
+</ul>
 
-</p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
+<h5 class="headings" id="where">Dlaczego flexbox</h5>
+<p class="actual-content">Flexbox zapewnia maksymalną responsywność, a także łatwość w pozycjonowaniu elementów strony, oczywiście są też inne 
+  sposoby tworzenia układów ale dziś zdecydowanie rzadziej stosowane ze względu na brak ich responsywności. Drugim najpopularniejszym sposobem jest grid.
+  Główne założenia flexboxa to: <br>Elastyczność: Flexbox umożliwia dynamiczne dostosowywanie się elementów do różnych rozmiarów ekranów oraz ilości dostępnej przestrzeni.<br>
+  <br>
+  Kontrola nad układem: Pozwala na łatwe definiowanie kolejności, porządku, rozmieszczenia i wyrównania elementów w kontenerze.<br>
+  <br>
+  Jeden wymiar: Flexbox działa w jednym wymiarze, co ułatwia zarządzanie układem elementów wzdłuż osi głównej (np. poziomo lub pionowo).<br>
+  <br>
+  Elastyczne przestrzenie: Flexbox oferuje elastyczne metody zarządzania przestrzenią między elementami, dzięki czemu można łatwo kontrolować odstępy i wyrównanie.<br>
+  <br>
+  Automatyczne dopasowywanie: Flexbox automatycznie dopasowuje się do rozmiaru elementów i dostępnej przestrzeni, co znacznie ułatwia responsywne projektowanie stron internetowych.<br>
+  Domyślną osią flexboxa jest oś pozioma, co powoduje że elementy ustawiają się wzdłuż tej osi. Można zmienić to zachowanie za pomocą css właściwości flex-direction. Aby element był uznawany jako flex ustawiamy właściwość display na flex.<br>Oto najważniejsze właściwości flex:</p>
+  <pre class="lang-css"><code>.element{
+ display: flex;
+ flex-direction: row; /* domyślna wartość, określa główną oś flex*/
+ flex-wrap: wrap; /*Określa czy elementy powinny się zawijać, dostepne wartości to wrap i nowrap*/
+ justify-content: flex-start; /* określa pozycjonowanie elementu, w tym wypadku wszystkie elementu będą na początku kontenera*/
+ align-items: center; /* określa pozycjonowanie elementu według drugorzędnej osi, w tym wypadku wszystkie elementu będą w centrum kontenera*/
+ flex-flow: row flex-start; /*Połączenie właściwości justify-content i flex-direction*/
+ align-content: flex-end; /* służy do pozycjonowania osi flex w przypadku zawijania*/
+  }
+</code></pre>
+
+  <p class="actual-content"> A oto najważniejsze rzeczy o osiach display flex na jedym zdjęciu:</p>
+  <blockquote>https://www.alibabacloud.com/blog/details-on-flexbox-layout_598139</blockquote>
+  <img src="../Obrazy/Uklady_stron/flex-axis.png" alt="flex axis" class="content-image" id="big-content">
+
+  <h6 class="headings" id="basics">Najpopularniejsze układy tutorial</h6>
+
+  <p class="actual-content" id="first">Pominiemy wykonanie pierwszego układu - bez układu.<br>Drugi układ to: header &amp;&amp; main, a robi się go tak:</p>
+  <pre class="lang-html"><code>&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;header&gt; &lt;p&gt;Header&lt;/p&gt; &lt;/header&gt;
+  &lt;main&gt; &lt;p&gt;Main&lt;/p&gt;&lt;/main&gt;
+&lt;/div&gt;</code></pre>
+<pre class="lang-css"><code>  .wrapper{ /*wrapper to miejsce przeznaczone na układ*/
+  width: 300px; /*szerokość układu*/
+  height: 400px;/*wysokość układu*/
+  border: 1px solid black; /*granica która ma 1px szerokości jest stałą linią i jest czarna*/
+  margin: 0 auto; /*środkowanie układu*/
+  display:flex;
+  flex-direction: column; /*zmiana głównej osi flex na pionową*/
+  }
+  header{
+  border-bottom:1px solid black;/*dolna granica*/
+  background-color: yellow;/*kolor tła*/
+  height: 110px;/*wysokość elementu*/
+  }
+  main{
+  background: red;
+  height: 100%;
+  }
+  p{
+  text-align: center;/*centrowanie textu*/
+  }</code></pre>
+  
 <p class="actual-content">
+  Efekt: 
 </p>
+<p class="actual-content" id="second">Trzeci układ to: header &amp;&amp; main &amp;&amp; footer, a robi się go tak:</p>
+<pre class="lang-html"><code>&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;header&gt; &lt;p&gt;Header&lt;/p&gt; &lt;/header&gt;
+  &lt;main&gt; &lt;p&gt;Main&lt;/p&gt;&lt;/main&gt;
+  &lt;footer&gt;&lt;p&gt;footer&lt;/p&gt;&lt;/footer&gt;
+&lt;/div&gt;</code></pre>
+<pre class="lang-css"><code>.wrapper{
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  }
+  header{
+  border-bottom:1px solid black;
+  background-color: yellow;
+  height: 10%;
+  }
+  main{
+  background: red;
+  height: 80%;
+  }
+  footer{
+  background: green;
+  height: 10%; /* wysokość to 10% .wrapper*/
+  }
+  p{
+  text-align: center;
+  }</code></pre>
+<p class="actual-content">
+Jak widać zmian prawie nie ma. Dodajemy footer, i tyle.<br> Efekt: 
+</p>
+<img src="../Obrazy/Uklady_stron/header_main_footer.png" alt="header+main+footer" class="layout-images">
+
+<p class="actual-content" id="third">Czwarty układ to: header &amp;&amp; main &amp;&amp; aside, a robi się go tak:</p>
+<pre class="lang-html"><code>  &lt;div class=&quot;wrapper&quot;&gt;
+   &lt;header&gt; &lt;p&gt;Header&lt;/p&gt; &lt;/header&gt;
+   &lt;div class=&quot;row-wrapper&quot;&gt; &lt;!--dodajemy pojemnik, aby ustawić na nim display flex, co ustawi elementy w poziomie--&gt;
+    &lt;main&gt; &lt;p&gt;Main&lt;/p&gt;&lt;/main&gt;
+    &lt;aside&gt;&lt;p&gt;aside&lt;/p&gt;&lt;/footer&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+  
+<pre class="lang-css"><code>.wrapper{
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  }
+  header{
+  border-bottom:1px solid black;
+  background-color: yellow;
+  height: 10%;
+  }
+  .row-wrapper{
+  display:flex; /* ustawia elementy w poziomie*/
+  height: 100%;/*wypełnienie dostępnej przestrzeni w poziomie i pionie*/
+  width: 100%;
+  
+  }
+  main{
+  background: red;
+  flex-grow: 1; /*pozwalamy elementowi zając całą dostępną przestrzeń (flex zajmuje na początku najmniejszą możliwą)*/
+  width: 80% 
+  }
+  aside{
+  background: green;
+  flex-grow: 1;
+  width: 20%;
+  }
+  p{
+  text-align: center;
+  }</code></pre>
+<p class="actual-content">
+<br> Efekt: 
+</p>
+<img src="../Obrazy/Uklady_stron/header_main_aside.png" alt="header+main+aside" class="layout-images">
+<p class="actual-content" id="third">Piąty układ to: header &amp;&amp; main &amp;&amp; aside &amp;&amp; footer, pominiemy go ponieważ wystarczy dodać w html coś takiego:</p>
+<pre class="lang-html"><code>&lt;footer&gt; &lt;p&gt; footer&lt;/p&gt; &lt;/footer&gt; &lt;!--po tagu zamykającym row-wrapper--&gt;</code></pre> 
+<p class="actual-content">
+  <br> Efekt: 
+  </p>
+  <img src="../Obrazy/Uklady_stron/header_main_aside_footer.png" alt="header+main+aside+footer" class="layout-images">
+
 <div id="button-next">
   <a id="next" href="../Podstrony/menu.html">NASTĘPNY ARTYKUŁ</a>
 </div>
