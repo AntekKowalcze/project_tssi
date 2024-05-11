@@ -1,0 +1,16 @@
+@media (max-width: 769px) {
+  .horizontal{
+    max-width: 85vw;  
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .horizontal{
+    max-width: 70vw;  
+  }
+
+}
+.horizontal{
+  max-width: 60vw;  
+}

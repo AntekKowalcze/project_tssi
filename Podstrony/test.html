@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .wrapper {
+        height: 200px;
+        width: 90%;
+        margin: 0 auto;
+      }
+      ul {
+        display: flex;
+        gap: 30px;
+      }
+      li {
+        margin: 0;
+        text-align: center;
+        list-style-type: none;
+        flex-grow: 1; /* pozwalamy elementowi rosnąć na maksymalną szerokość i wysokość*/
+        border-radius: 10px; /*zaokrąglamy granice elementu*/
+        border: 2px solid red;
+        background: black;
+        padding-block: 10px; /* zwiększamy przestrzeń między kontentem a granicą */
+      }
+      a {
+        text-decoration: none;
+        /* pozwalamy elementowi rosnąć na maksymalną szerokość i wysokość*/
+        flex-grow: 1;
+        color: white;
+      }
+      ol{
+display: none;
+        position: absolute;
+        top: 60px;
+        right: 950px;
+        width: 21%;
+        
+      }
+      ol li{
+        margin-bottom: 5px;
+        color: white;
+      }
+      ol a{
+        text-decoration: none;
+      }
+      ul:hover ol {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul>
+        <li><a href="#">link1</a></li>
+        <li><a href="#">link2</a>
+         <ol>
+           <li>link1</li>
+           <li>link2</li>
+           <li>link3</li>
+        </ol>
+        </li>
+        <li><a href="#">link3</a></li>
+        <li><a href="#">link4</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

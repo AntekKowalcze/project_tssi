@@ -70,38 +70,158 @@
       <div class="path"></div>
       <main>
         <div class="image-and-h2">
-          <h2>HEADING1</h2>
-          
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          <h2>Menu</h2>
+
         </div>
 
-        <h3>Heading2</h3>
+        <h3>Menu służą głównie do nawigacji po stronie, ale także do wybierania np produktów na stronach e-commerce. Są na praktycznie każdej stronie Internetowej, dlatego umiejętność tworzenia ich to muss programisty.</h3>
         
         <div class="contents">
           <p class="actual-content" id="no-style">Spis treści</p>
           <ul>
-            <li><a href="#what-is"> link</a></li>
-            <li><a href="#why"></a></li>
-            <li><a href="#where"></a></li>
-            <li><a href="#basics"></a></li>
+            <li><a href="#what-is">Po co nam menu?</a></li>
+            <li><a href="#why">Podział menu</a></li>
+            <li><a href="#where">Zwykłe menu poziome i pionowe</a></li>
+            <li><a href="#basics">Menu rozsuwane</a></li>
           </ul>
         </div>
-        <p class="headings"></p>
+        <p class="headings">Po co nam menu?</p>
         <p id="what-is" class="actual-content">
-        
+        Menu używa się jako elementów nawigacji po stronie, tak jak na przykład tej na której jesteś. Tworzy się wiele typów menu, np. menu hamburger (takie jak w wersji mobilnej tej strony) czy menu rozsuwane. 
+        W tym artykule skupimy się na menu pionowych, poziomych i tych typu dropdown.
         </p>
       
 <h4 class="headings"  id="why">
- 
+  Podział menu
 </h4>
 <p class="actual-content">
-
+Nie ma dokładnie określonego podziału menu. Jest ich tyle, ile wymyślą designerzy i napiszą programiści. Najpolularniejsze to te do nawigacji, najprostsze pionowe lub poziome 
+menu z linkami do innych podstron witryny, czy kotwicami w przypadku onepagy. Pod tym <a href="https://freefrontend.com/css-menu/" target="_blank">linkiem</a> znajdziesz 110 rodzaji menu.
 </p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
+<h5 class="headings" id="where">Zwykłe menu poziome i pionowe</h5>
+<p class="actual-content">A więc jak stworzyć takie menu? W tej sekcji znajdziesz na to odpowiedź.<br>Menu poziome.<br>
+  Menu to nic innego jak odpowiednio wystylizowana lista odnośników. więc pierwszym krokiem będzie wykonanie listy w html.</p>
+  <pre class="lang-html"><code>&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+  <pre class="lang-css"><code>
+    .wrapper {
+      height: 200px;
+      width: 90%;
+      margin: 0 auto;
+    }
+    ul {
+      display: flex;
+      gap: 30px;
+    }
+    li {
+      margin: 0;
+      text-align: center;
+      list-style-type: none;
+      flex-grow: 1; /* pozwalamy elementowi rosnąć na maksymalną szerokość i wysokość*/
+      border-radius: 10px; /*zaokrąglamy granice elementu*/
+      border: 2px solid red;
+      background: black;
+      padding-block: 10px; /* zwiększamy przestrzeń między kontentem a granicą */
+    }
+    a {
+      text-decoration: none;
+      /* pozwalamy elementowi rosnąć na maksymalną szerokość i wysokość*/
+      flex-grow: 1;
+      color: white;
+    }
+  </code></pre>
+  <p class="actual-content"> Otrzymujemy takie menu:</p>
+  <img src="../Obrazy/menu/menu_poziome.png" class="horizontal" alt="menu poziome">
+  <p class="actual-content"> Aby otrzymać menu pionowe, wystrczy dokonać kilku małych zmian w css:</p>
+  <pre class="lang-css"><code> .wrapper {
+    height: 200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex; /* aby wycentrować menu w pionie*/
+    justify-content: center;/* aby wycentrować menu w pionie*/
+  }
+  ul {
+    display: flex;
+    gap: 30px;
+    flex-direction: column; /*aby wyświetlić elementy nad sobą*/
+    width: 100px;
+  }/*reszta pozostaje bez zmian*/
+</code></pre>
+  <p class="actual-content"> Otrzymujemy takie menu:</p>
+  <img src="../Obrazy/menu/menu_pionowe.png" class="horizontal" alt="menu poziome">
+
+  <h6 class="headings" id="basics">Menu rozsuwane</h6>
+  <p class="actual-content">Aby stworzyć menu rozsuwane musimy umieścić pod nim drugie menu, które pokaże się po najechaniu na pierwsze myszką. A robimy to tak:</p>
+  <pre class="lang-html"><code>   &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link2&lt;/a&gt;
+       &lt;ol&gt;
+         &lt;li&gt;link1&lt;/li&gt;
+         &lt;li&gt;link2&lt;/li&gt;
+         &lt;li&gt;link3&lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;</code></pre>
+
+  <pre class="lang-css"><code>  .wrapper {
+    height: 200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  ul {
+    display: flex;
+    gap: 30px;
+  }
+  li {
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    flex-grow: 1; /* pozwalamy elementowi rosnąć na maksymalną szerokość i wysokość*/
+    border-radius: 10px; /*zaokrąglamy granice elementu*/
+    border: 2px solid red;
+    background: black;
+    padding-block: 10px; /* zwiększamy przestrzeń między kontentem a granicą */
+  }
+  a {
+    text-decoration: none;
+    /* pozwalamy elementowi rosnąć na maksymalną szerokość i wysokość*/
+    flex-grow: 1;
+    color: white;
+  }
+  ol{
+    display: none; /*ustawiamy wyświeltanie się elementu na brak, aby nie było widoczne bez nasuwania myszką*/
+    position: absolute; /*pozycjonujemy liste względem dokumentu, aby zajdowałą się pod li a nie w nim.*/
+    top: 60px;
+    right: 950px;
+    width: 21%;
+    
+  }
+  ol li{
+    margin-bottom: 5px; /*ustawiamy odstęp między elementami*/
+    color: white;
+  }
+  ol a{
+    text-decoration: none;
+  }
+  ul:hover ol {/* kiedy na elemencie znajduje się myszka ustaw wartość ol na:*/
+    display: block /*zmieniamy wyświetlanie na blokowe*/
+  }</code></pre>
+  <p class="actual-content">
+    Otrzymujemy takie menu po najechaniu myszą:
+  </p>
+  <img src="../Obrazy/menu/menu_rozsuwane.png" alt="menu rozsuwane" class="horizontal">
 <p class="actual-content">
+  W tym artykule nauczyłeś się robić najprostsze menu!
 </p>
 <div id="button-next">
   <a id="next" href="../Podstrony/figury.html">NASTĘPNY ARTYKUŁ</a>
