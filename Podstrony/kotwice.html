@@ -70,35 +70,56 @@
       <div class="path"></div>
       <main>
         <div class="image-and-h2">
-          <h2>HEADING1</h2>
+          <h2>Linki i kotwice w HTML</h2>
           
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          
         </div>
 
-        <h3>
-        HEADING2
+        <h3 id="kotwica">
+        Linki umożliwiają nam płynne poruszanie się po Internecie, dlatego trzeba wiedzieć w jaki sposób umieszczać linki w swoich dokumentach html.</h3>
+        <img src="../Obrazy/kotwice/link.png" alt="a html tag" class="under-h3" />
         <ul class="contents">
           <p class="actual-content">Spis treści</p>
-          <li><a href="#what-is"></a></li>
-          <li><a href="#why"></a></li>
-          <li><a href="#where"></a></li>
-          <li><a href="#basics"></a></li>
+          <li><a href="#what-is">Znacznik &lt;a&gt;</a></li>
+          <li><a href="#why">Znacznik &lt;a&gt; jako hyperlink</a></li>
+          <li><a href="#where">Znacznik &lt;a&gt; jako kotwica</a></li>
         </ul>
-        <p class="headings"></p>
+        <p class="headings">Znacznik &lt;a&gt;</p>
         <p id="what-is" class="actual-content">
-        
+        Jak można było zobaczyć w poprzednich artykułach znacznik &lt;a&gt; 
+        sluży do umieszczania hiperłącz do stron internetowych, ale może on także być hiperłączem do elemetnu naszego dokumentu. 
+        A jeśli połączymy te dwie funkcje, to możemy dodać link do danego elementu strony internetowej.
+        Budowa znacznika &lt;a&gt; wygląda tak: 
+        <pre class="lang-html"><code>&lt;a href=&quot;link-lub-kotwica&quot;&gt;element widoczny na stronie&lt;/a&gt;</code></pre>
         </p>
+        <p class="actual-content">Rozbijmy to na mniejsze części. W znaczniku &lt;a&gt; znajduje się atrybut href w którym dodajemy nasze hiperłacze, a w jego środku dajemy kontent, który ma być widoczny na stronie. </p>
       
 <h4 class="headings"  id="why">
- 
+ Znacznik &lt;a&gt; jako hyperlink
 </h4>
 <p class="actual-content">
+Jeśli chcemy użyć znacznika jako hiperłącza musimy w atrybucie href podać link do strony, na którą chcemy przenieść użytkownika. Zawartość znacznika jest dowolna. 
+Do tagu &lt;a&gt; możemy dodać kilka innych atrybutów takich jak np: download, target, czy type. Atrybut download określa, że treść linku zostanie pobrana jeśli użytkownik kliknie na link. 
+target oznacza, gdzie ma otworzyć się link, czy ma to być nowe okno przeglądarki, okno rodzica, okno główne, czy okno o danej określonej nazwie.
+<pre class="lang-html"><code>&lt;a href=&quot;https://github.com/AntekKowalcze/project_tssi&quot; target=&quot;_blank&quot; type=&quot;html&quot;&gt; link do repozytorium na githubie &lt;/a&gt;</code></pre> 
 
 </p>
-<h5 class="headings"id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
+<p class="actual-content">Efekt: <br><a href="https://github.com/AntekKowalcze/project_tssi" target="_blank" type="html"> link do repozytorium na githubie</a></p>
+
+
+<h5 class="headings"id="where">Znacznik &lt;a&gt; jako kotwica</h5>
+<p class="actual-content">Kotwice są ważnym elementem coraz popularniejszych stron typu onepage, umożliwiają one nawigację po stronie. Aby utworzyć kotwicę czyli inaczej odnośnik do elementu na naszej stronie używamy znacznik &lt;a&gt; 
+  z atrybutem href a w nim # i id elementu, do którego chcemy się odnieść. Ale jak ustawić ID? Bardzo prosto. Na elemencie, do którego chcemy, aby link prowadził wpisujemy atrybut id="nazwa" 
+jednak co ważne id nie może rozpoczynać się cyfrą i nie mogą się w nim znajdować polskie znaki. I wystpuje zasada: jedno id - jeden znacznik.
+<pre class="lang-html"><code>&lt;header id=&quot;id-elementu&quot;&gt;&lt;/header&gt;
+&lt;a href=&quot;#id-elementu&quot;&gt;&lt;/a&gt;</code></pre></p>
+<p class="actual-content">A działa to tak:<br>Kliknij w podkreślony element aby przenieść się do początku strony<br> <a href="#kotwica">kliknij tu</a>
+<br><br> Aby uprzyjemnić korzystanie z tego elementu możemy na znaczniku html ustawić atrybut style="scroll-behavior: smooth;"</p>
+<p class="actual-content">Możemy teraz wykorzystać wiedzę i połączyć te dwa elementy, 
+  Możemy stworzyć link, który przeniesie nas do wybranego elementu wybranej strony internetowej.
+<pre class="lang-html"><code>&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML#nav-footer&quot target="_blank"&gt;ten link przeniesie cię do stopki strony mozilli&lt;/a&gt;</code></pre></p>
+
+  <p class="actual-content"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML#nav-footer" target="_blank"> link przeniesie cię do stopki strony mozilli</a></p>
 <p class="actual-content">
 </p>
 <div id="button-next">

@@ -875,8 +875,11 @@ aspect-ratio: 3/4;
   }
 
   pre {
-  max-width: 70vw;
+  max-width: 50vw;
   font-size: 1.7rem !important;
+  }
+  code{
+    max-width: 60vw;
   }
   .actual-content {
     padding-top: 2rem;
