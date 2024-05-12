@@ -1,0 +1,27 @@
+.header-img{
+max-width: 7vw !important;
+aspect-ratio: 4/3 !important;
+margin-bottom: 3rem;
+animation: rotation 3s linear infinite;
+
+}
+@media (max-width: 1200px) {
+  .header-img{
+    max-width: 15vw !important;
+    margin-bottom: 4vw !important;
+  }
+}
+@media (max-width: 769px) {
+  .header-img{
+    max-width: 20vw !important;
+    margin-bottom: 12vw !important;
+  }
+}
+@keyframes rotation {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

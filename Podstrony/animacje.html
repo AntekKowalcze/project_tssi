@@ -72,7 +72,7 @@
         <div class="image-and-h2">
           <h2>Animacje</h2>
           
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" alt="znacznik" class="header-img"/>
         </div>
 
         <h3>Animacje pozwalaja na zwiększenie atrakcyjności naszej strony i zapewnienie lepszych wrażeń użytownika. Są one dopełnieniem designu strony, i stanowią często ważny element ograniczajacy frustracje użytkownika. Np. paski ładowania czy potwierdzenia kliknięcia to jede z nich.</h3>
@@ -80,29 +80,61 @@
         <div class="contents">
           <p class="actual-content" id="no-style">Spis treści</p>
           <ul>
-            <li><a href="#what-is">Jak robi się animacje</a></li>
+            <li><a href="#what-is">Po co robi się animacje</a></li>
             <li><a href="#why">transform i transition</a></li>
             <li><a href="#where">@keyframes</a></li>
-            <li><a href="#basics">Tworzenie prostej animacji</a></li>
           </ul>
         </div>
-        <p class="headings"></p>
+        <p class="headings">Po co robi się animacje</p>
         <p id="what-is" class="actual-content">
         
-        </p>
+Animacje na stronach internetowych mają kilka istotnych zastosowań. Po pierwsze, przyciągają uwagę użytkowników i sprawiają, że 
+strona staje się bardziej atrakcyjna wizualnie, co może zwiększyć zaangażowanie użytkowników. Po drugie, mogą być używane do dynamicznego 
+prezentowania treści, ułatwiając przyswajanie informacji. Po trzecie, mogą pełnić funkcje informacyjne, np. poprzez animowane wykresy czy 
+infografiki, które lepiej przekazują dane. Dodatkowo, animacje mogą też poprawiać interaktywność strony, np. przez animowane przyciski czy efekty przejścia. Wreszcie, 
+dobrze zaprojektowane animacje mogą poprawić doświadczenie użytkownika, sprawiając, że nawigacja po stronie jest bardziej płynna i intuicyjna.
+<br> Trzeba jednak uważać ze zbyt dużą ilością skomplikowanych animacji, ponieważ te zużywają moc obliczeniową i wydłużają ładowanie strony, co jest nie porządane,
+gdy chcemy stworzyć stronę z dobrą opinią wśród użytkowników. Należy pamiętać też że dobry design, to prosty design. Jeśli popatrzymy na najczęściej
+odwiedzane strony internetowe są one intuicyjne i banalnie proste w budowie, powtarzalne. A robi się to po to, aby użytkownik załatwił jak najszybciej to, co potrzebuję.</p>
       
 <h4 class="headings"  id="why">
- 
+ transform i transition
 </h4>
 <p class="actual-content">
+transform i transition, to podstawowe elementy tworzenia animacji. transform oznacza jak ma się zmieniać dany obiekt, a transition określa w jaki sposób animacja ma przebiegać. 
+Przykładowo, jeśli chcemy aby element powiększył się o 20% użyjemy transform: scale(1.2), a w transition umieścimy opis jak animacja ma się wykonać np. transition: 2s ease-in;
+Animacja z nagłówka tego artykułu wygląda tak:</p>
+<pre class="lang-css"><code>img{
+transform: rotate(360deg); 
+transition: linear 3s;
+}
+</code></pre>
+<p class="actual-content">Polecam zagłębić się w temat transition i transform, ponieważ pozwala on na tworzenie bardzo fajnych animacji, nie dużą ilością pracy.</p>
+<h5 class="headings" id="where">@keyframes</h5>
+<p class="actual-content">@keyframes to określenie definiujące animacje. Mówimy że tworzymy zestaw klatek, które będą wykonywały jakąś czynność.<br>Kod animacji z nagłówka tej strony wygląda tak:</p>
+<pre class="lang-css"><code>@keyframes rotation {
+  from{ /*from oznacza pozycję początkową*/
+    transform: rotate(0deg);
+  }
+  to{/*to oznacza pozycję końcową*/
+    transform: rotate(360deg);
+  }
+  /*Możemy też spotkać się z takim zapisem: 0%{
 
-</p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
-<p class="actual-content">
-</p>
+  }
+  60%{ Określa on co ma dziać się w poszczególnych momentach trwania animacji.
+
+  }
+  100%{
+
+  }*/
+}
+.header-img{
+  /*aniamtion działa podobnie jak transition tyle że dodajemy nazwę animacji i mamy kilka opcji więcej*/
+  animation: rotation 3s linear infinite; /*animation: name duration timing-function delay iteration-count direction fill-mode;*/ 
+  /*to wszystkie możliwe cechy które może przyjąć animacja*/
+}</code></pre>
+<p class="actual-content">Teraz już znasz podstawy tworzenia animacji. Animacji najlepiej uczyć sie tworząc je dlatego zapraszam do eksperymentowania.</p>
 <div id="button-next">
   <a id="next" href="../Podstrony/quiz.html">NASTĘPNY ARTYKUŁ</a>
 </div>
