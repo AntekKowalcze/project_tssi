@@ -12,7 +12,7 @@
     <title>HTML5 i CSS3</title>
     <link rel="stylesheet" href="../CSS/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../CSS/subpages.css" />
-    <link rel="stylesheet" type="text/css" href="../CSS/13.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/subpages/13.css" />
 
     <link
       rel="stylesheet"
@@ -72,39 +72,108 @@
         <div class="image-and-h2">
           <h2>Responsywne strony Internetowe</h2>
           
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+          
         </div>
 
         <h3>Responsywność to kluczowy element strony internetowej. Ponieważ w dzisiejszych czasach nie tak jak dawjniej Internet przegląda się na urządzeniach mniejszych jak telefony i większych jak telewizory.
           Ogólne założenie responsywnego designu jest to, aby strona na każdym urządzeniu działała tak samo i wyglądałą podobnie.
         </h3>
-        
+        <img src="../Obrazy/rwd/rwd.jpg" alt="rwd image" class="header-img" />
         <div class="contents">
           <p class="actual-content" id="no-style">Spis treści</p>
           <ul>
             <li><a href="#what-is">Czym jest responsywność</a></li>
-            <li><a href="#why">Podstwawowe metody tworzenia responywnych stron</a></li>
-            <li><a href="#where"><@media</a></li>
-            <li><a href="#basics">Pozwól przegladarce decydować</a></li>
+            <li><a href="#why">Podstwawowe metody tworzenia responywnych stron, jednostki</a></li>
+            <li><a href="#where">@media</a></li>
+            <li><a href="#basics">Pozwól przeglądarce decydować</a></li>
           </ul>
         </div>
-        <p class="headings"></p>
+        <p class="headings">Czym jest responsywność</p>
         <p id="what-is" class="actual-content">
-        
-        </p>
+        Responsywność to nic innego jak cecha strony internetowej, która na wielu urządzeniach działa identycznie i wygląda podobnie. Największymi wyzwaniami w tworzeniu responsywnej strony, jest dopasowanie się do 
+        zmieniającej się szerokości urządzeń. Responsywna strona działa tak samo, bez przepełnień i przewijania bocznego zarówno na smartwatchu jak i 70' telewizorze. Aby tworzyć strony responsywne trzeba porzucić jednostki 
+        statyczne takie jak np. px, a zacząć używać vw czy em/rem. Aby strona działałą responsywnie jej design musi być przystosowany do zmian szerokości i układów z zachowaniem funkcjonalności.
+      </p>
       
-<h4 class="headings"  id="why">
- 
+<h4 class="headings" id="why">
+ Podstawowe metody tworzenia responsywnych stron, jednostki
 </h4>
 <p class="actual-content">
+Pierwszym warunkiem do stworzenia responsywnej strony jest przemyślenie jak nasza strona powinna się dostosować do deficytu miejsca.
+Musimy jednak pamiętać, aby elementy nie stawały się za małe dla użytkownika, i nie rozlewały się ponad szerokość urządzenia.
+Kolejnym ważnym elementem, jest opanowanie metod tworzenia układów takich jak grid czy flexbox. Ponieważ pozwalają one na stworzenie układu
+dostosowującego się do urządzenia.<br>
+Dobór jednostek jest kolejnym ważnym krokiem, aby stworzyć stronę, ważna jest także jednolitość w używaniu ich, ponieważ ułatwia to pracę z kodem.
+Jednostki dzielą się na względne i bezwzględne. Tworząc układ responsywny będziemy nakładać nacisk na używnie jednostek względnych.
+Oto wypisane jednostki według tego podziału z wyjaśnieniem.
+</p>
+<dl>
+  <dt>Piksel (px)</dt>
+  <dd>Najpopularniejsza jednostka bezwzględna. 1 piksel odpowiada jednemu punktowi na ekranie. Stosowana do elementów graficznych, ikon, obrazków. Przydatna do drukowania. </dd>
 
-</p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
-<p class="actual-content">
-</p>
+  <dt>Centymetr (cm)</dt>
+  <dd>1 centymetr odpowiada 10 milimetrom lub 0,3937 cala. Jednostka bezwzględna stosowana w układach stron, formularzach i broszurach.</dd>
+
+  <dt>Milimetr (mm)</dt>
+  <dd>1 milimetr odpowiada 0,1 centymetra lub 0,03937 cala. Jednostka bezwzględna stosowana w drukowaniu i precyzyjnych układach.</dd>
+
+  <dt>Cal (in)</dt>
+  <dd>1 cal odpowiada 2,54 centymetra lub 10 milimetrom. Jednostka bezwzględna stosowana w krajach anglosaskich w drukowaniu i układach stron.</dd>
+
+  <dt>Punkt (pt)</dt>
+  <dd>1 punkt odpowiada 0,072 cala lub 1/72 cala. Jednostka bezwzględna stosowana w typografii cyfrowej i drukowaniu.</dd>
+
+  <dt>Pica (pc)</dt>
+  <dd>1 pica odpowiada 12 punktom lub 0,1667 cala. Jednostka bezwzględna stosowana w typografii cyfrowej i drukowaniu.</dd>
+
+</dl>
+
+
+<p class="actual-content"> A teraz trochę o jednostkach względnych:</p>
+  <dl>
+    <dt>Procent (%)</dt>
+    <dd>Rozmiar elementu jako procent rozmiaru nadrzędnego elementu. Na przykład `width: 50%` oznacza: ​​element będzie miał szerokość równą połowie szerokości swojego elementu nadrzędnego.</dd>
+
+    <dt>Em (em)</dt>
+    <dd>Rozmiar elementu jako mnożnik domyślnej wielkości czcionki. Na przykład `font-size: 1.5em` oznacza: ​​czcionka elementu będzie o 50% większa od domyślnej wielkości czcionki.</dd>
+
+    <dt>Rem (rem)</dt>
+    <dd>Rozmiar elementu jako mnożnik rozmiaru czcionki elementu głównego (html). Na przykład `font-size: 1.5rem` oznacza: ​​czcionka elementu będzie o 50% większa od rozmiaru czcionki elementu html.</dd>
+
+    <dt>Viewport (vw, vh)</dt>
+    <dd>Rozmiar elementu jako procent szerokości (vw) lub wysokości (vh) okna przeglądarki. Na przykład `width: 50vw` oznacza: ​​element będzie miał szerokość równą połowie szerokości okna przeglądarki.</dd>
+    <dt>Vmax</dt>
+    <dd>Wybiera maksymalną wartość viewport (wysokość lub szerokość) Na przykład 'height:50vmax' oznacza 50% większego elementu viewport (szerokości lub wysokości)</dd>
+    <dt>Ex (ex)</dt>
+    <dd>Wysokość małej litery "x" w danej czcionce.</dd>
+
+    <dt>Ch (ch)</dt>
+    <dd>Szerokość średniej litery w danej czcionce.</dd>
+  </dl>
+<h5 class="headings" id="where">@media</h5>
+<p class="actual-content">@media w css to element wysyłający zapytanie do przeglądarki o szerokość urządzenia (i inne rzeczy ale o nich nie tutaj) i stosujący style przypisane do tego @media. Składnia elementu @media wygląda tak:</p>
+<pre class="lang-css"><code>@media (min-width: 769px){ /* ten zapis mówi nam jeśli urządzenie ma przynajmniej 769px szerokości, stosuj te style*/
+atrybuty:css;
+}
+/*lub*/
+@media (max-width: x){
+  atrybuty:css;
+}
+/*lub*/
+@media (min-width: y) and (max-width: x){/*Trzeba pamiętać że tutaj oba warunki muszą być prawdziwe*/
+  
+}
+</code></pre>
+<p class="actual-content">Korzystajac z @media warto znać tzw. breakpointy danych urządzeń. Są to:</p>
+<img src="../Obrazy/rwd/breakpoints.png" alt="breakpoints" class="content-img">
+<p class="actual-content">Należy pamiętać aby @media umieszczać na koću dokumentu css, aby nie zostawały nadpisane przez późniejsze style.</p>
+  <h6 class="headings" id="basics">Pozwól przeglądarce decydować</h6>
+  <p class="actual-content">W nowoczesnym css-ie stosuje się coraz częściej takie właściwości jak max-width, max-height czy np. funkcje clamp(), min() czy max(). Pozwalaja one na 
+    Uproszczenie tworzenia responsywnej strony i nie używanie tag dużo zapytań @media. Pomagać mogą też narzędzia typu flexbox z właściwościami np. flex-wrap. Przydatne też są wartości auto,
+    fit-conent czy np auto-fit, przydatna też jest właściwość box-sizing.<br>
+    Jak widać css dostarcza nam wiele narzędzi, aby ułatwić tworzenie responsywnych stron internetowych, trzeba się tylko zagłębić i je poznać. 
+  </p>
+
 <div id="button-next">
   <a id="next" href="../Podstrony/formularze.html">NASTĘPNY ARTYKUŁ</a>
 </div>
