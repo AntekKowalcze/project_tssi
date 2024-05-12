@@ -71,8 +71,7 @@
       <main>
         <div class="image-and-h2">
           <h2>Pozycjonowanie</h2>
-          
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+        
         </div>
 
         <h3>Pozycjonowanie to ważna umiejętność w repertuarze osoby piszącej css-a, jest to czasem jedyne rozwiązanie, aby poprawić denerwujące nas zachowanie np. przeglądarki.</h3>
@@ -83,23 +82,66 @@
             <li><a href="#what-is">Pozycjonowanie rodzaje i podstawy</a></li>
             <li><a href="#why">relative vs absolute</a></li>
             <li><a href="#where">fixed vs sticky</a></li>
+            <li><a href="#basics">Inherit i static</a></li>
+            
           </ul>
         </div>
-        <p class="headings"></p>
+        <p class="headings">Pozycjonowanie rodzaje i podstawy</p>
         <p id="what-is" class="actual-content">
-        
+        Pozycjonowanie określa relacje, między elementami, a także mówi czy element powinien znajdować się we flow dokumentu, czy też nie. Dlatego zobaczmy podstawowe wartości własność position.
+        <br><br>static: Jest to wartość domyślna, która pozostawia element w jego normalnym miejscu w układzie strony.<br><br>
+relative: Pozycjonuje element względem jego normalnego miejsca, ale umożliwia przesuwanie go za pomocą właściwości top, right, bottom i left.<br><br>
+absolute: Pozycjonuje element względem jego najbliższego pozycjonowanego przodka, ignorując inne elementy na stronie.<br><br>
+fixed: Pozycjonuje element względem okna przeglądarki, co oznacza, że ​​pozostanie na stałej pozycji nawet podczas przewijania strony.<br><br>
+position: sticky to stosunkowo nowa właściwość CSS, która pozwala elementowi zachować się jak position: relative do momentu, gdy nie jest przewijany poza określony obszar na stronie, a następnie zachowuje się jak position: fixed. 
+Jest to bardzo przydatne narzędzie do tworzenia chociażby nagłówków takich jak w wersji mobilnej tej strony.<br><br>
+Szerzej o tych wartościach będzie w kolejnych akapitach artykułu. 
         </p>
       
 <h4 class="headings"  id="why">
- 
+  relative vs absolute
 </h4>
 <p class="actual-content">
-
+Pozycjonowanie relative jest najpopularniejszym rozwiązaniem, ponieważ pozwala na lekkie korekty pozycji względem wyjściowej pozycji elementu. Natomiast
+pozycjonowanie typu absolute jest częściej używane w przypadkach kiedy elementy mają nachodzić na siebie, czy byś w ustalonym miejscu względem dokumentu.
+Position relative, jak wcześniej napisałem pozycjonuje się w obec swojej wyjściowej pozycji, pozostając we flow dokumentu. 
+A absolute wyrzuca element z flow dokumentu (czyli jeśli umieścił być diva w miejscu bazowym elementu position absolute, to również wyświetlił by się w jego miejsu ignorując element z pozycjonowaniem absolute), i pozycjonuje się względem najbliżeszgo rodzica z nie domyślnym pozycjonowaniem(nie static).
+<br>Ale jak możemy pozycjonować? Zarówno w absolute i relative mamy własność top, bottom, left, rigth, lecz działają one nieco inaczej. 
+W position absolute, wartości te określają odległość od elementu względem, którego pozycjonujemy, a w relative określamy o ile w daną stronę ma odsunąć się element względem pozycji wyjściowej. <br>
+Tak wygląda pozycjonowanie elementu w CSS.
 </p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
+<pre class="lang-css"><code>.element-absolute{
+  position: absolute;
+  top: 20px; /*będzie znajdował się 20px od góry od elementu względem którego pozycjonujemy */
+  left: 10px;
+}
+.element-relative{
+  position: relative;
+  top: 20px; /*będzie znajdował się 20px w dół od swojej pozycji początkowej */
+  left: 10px;
+}</code></pre>
+<h5 class="headings" id="where">fixed vs sticky</h5>
+<p class="actual-content">Pozycjonowanie fixed umieszcza element w określonym miejscu na stronie, podobnie jak postion absolute.Pozycja elementu jest określana względem okna przeglądarki lub najbliższego rodzica.
+  Element zostaje usunięty z flow dokumentu, co oznacza, że ​​inne elementy nie będą się wokół niego układać.
+  To pozycjonowanie często jest używane do elementów, które mają być widoczne cały czas na ekranie, np. pasków nawigacyjnych i przycisków czatu.<br><br>Position sticky umożliwia przyklejenie elementu do określonego miejsca na stronie, aż do momentu, gdy zostanie osiągnięta inna pozycja (najczęściej jest to góra ekranu, lub koniec wysokości/szerokości elementu).
+  Pozycja jest określana względem jego najbliższego rodzica z nie domyślnym pozycjonowaniem (nie static) lub względem okna przeglądarki (jeśli rodzic nie ma scrollowania).
+  Element pozostaje częściowo w flow dokumentu, co oznacza, że ​​inne elementy mogą się wokół niego układać, dopóki nie zostanie "przyklejony" (osiągnie daną pozycje i na niej zostanie).
+  Często używane do elementów, które powinny być widoczne podczas scrollowania określonego obszaru, np. boczne menu na stronach z dużą ilością treści. Atrybutem częśto łączącym się z position sticky jest z-index, mówiący o tym co ma pierwszeństwo w wyświetlaniu się na stronie.
+  Im wyższy z-index tym wyżej wyświetlony będzie element w przypadku nakładania się.</p>
+  <pre class="lang-css"><code>.nawigacja {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;/*często używane pozycjonowanie, aby element pozostał na górze strony,*/
+  }
+  .menu {
+    position: sticky;
+    top: 50px; /* Początkowa odległość od góry*/
+    left: 0;
+  }</code></pre>
+  <h6 class="headings" id="basics">Inherit i static</h6>
+  <p class="actual-content">Te pozycjonowania są najprostsze do zrozumienia, inherit oznacza, odziedziczyć pozycjonowanie po rodzicu (sama wartość relative,absolute,fixed,itp.). A position static to domyślne ustawione pozycjonowanie, umieszcza element we flow dokumentu i umieszcza je w kolejności określonej przez właściwość display: <br>
+  W tym artykule dowiedziałeś się najważniejszych rzeczy o pozycjonowaniu w css</p>
 <p class="actual-content">
 </p>
 <div id="button-next">

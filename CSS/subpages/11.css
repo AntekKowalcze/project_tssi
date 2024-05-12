@@ -1,0 +1,12 @@
+.content-pic{
+  
+max-width: 12vw !important;
+aspect-ratio: 3/2 !important;
+ 
+}
+
+@media (max-width: 769px) {
+  .content-pic{
+    max-width: 30vw !important;
+  }
+}

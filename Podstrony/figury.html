@@ -72,7 +72,7 @@
         <div class="image-and-h2">
           <h2>Figure</h2>
           
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+
         </div>
 
         <h3>
@@ -80,27 +80,35 @@
         <div class="contents">
         <p class="actual-content" id="no-style">Spis treści</p>
         <ul>
-          <li><a href="#what-is">Znacznik figure budowa.</a></li>
-          <li><a href="#why">Podstawowe zastosowania.</a></li>
+          <li><a href="#what-is">Po co nam znacznik &lt;figure&gt;</a></li>
+          <li><a href="#why">Jak używać tego znacznika</a></li>
+          <li><a href="#where">Gzie jeszcze można użyć &lt;figure&gt;</a></li>
         </ul>
       </div>
-        <p class="headings"></p>
+        <p class="headings">Po co nam znacznik &lt;figure&gt;</p>
         <p id="what-is" class="actual-content">
-        
+          Struktury multimedialne na stronach powinny być oznaczane znacznikiem &lt;figure&gt;. 
+          &lt;figure&gt; łączy zdjęcie, dźwięk czy film z jego opisem, co pozwala użytkownikom zrozumienie treści i połączenie elementów robotom indeksującym strony internetowe. 
+         Ponadto strona staje się bardziej dostępna dla użytkowników czytników ekranowych.
         </p>
       
 <h4 class="headings"  id="why">
- 
+ Jak używać tego znacznika.
 </h4>
 <p class="actual-content">
+  Poniżej znajdziesz najprostsze zastosowanie znacznika figure, a pod nim wyjaśnienie kodu:
+</p>
+<pre class="lang-html"><code>&lt;figure&gt;
+ &lt;img src=&quot;https://duzerabaty.pl/uploads/blogpost/10-porad-jak-robic-piekne-zdjecia.jpg&quot; alt=&quot;obrazek&quot;&gt;
+ &lt;figcaption&gt; Drzewo na pięknym tle&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
 
-</p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
-<p class="actual-content">
-</p>
+<p class="actual-content">W znaczniku figure obowiązkowo musi znajdować się znacznik z jakimś medium, np. wideo, obrazek, albo np. tekst po nim musi znajdować się jego opis, w znaczniku &lt;figaption&gt;.<br>A oto efekt, w cssie zmieniony został tylko kolor tła oraz szerokość obrazka.</p>
+<img src="../Obrazy/Figure/figure.png" alt="przykład zastosowania figure" class="content-pic">
+<h5 class="headings" id="where">Gzie jeszcze można użyć &lt;figure&gt;</h5>
+<p class="actual-content">Znacznika figure można np. użyć aby prezentować cytaty, w figure umieszczamy imię i nazwisko autora, a w figcaption, znacznik &lt;blockquote&gt; i w nim treść cytatu.</p>
+
 <div id="button-next">
   <a id="next" href="../Podstrony/favicon.html">NASTĘPNY ARTYKUŁ</a>
 </div>

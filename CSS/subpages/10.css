@@ -1,0 +1,13 @@
+.content-pic{
+  max-width: 40vw;
+}
+@media (max-width: 769px) {
+  .content-pic{
+    max-width: 60vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200){
+  .content-pic{
+    max-width: 45vw;
+  }
+}
