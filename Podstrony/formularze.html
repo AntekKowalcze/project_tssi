@@ -72,7 +72,7 @@
         <div class="image-and-h2">
           <h2>Formularze</h2>
           
-          <img src="../Obrazy/Podstawowe_znaczniki_html/znacznik.jpg" />
+         
         </div>
 
         <h3>Formularze są szeroko wykorzystywane w internecie, czy w sklepach internetowych, aby zebrać dane o użytkowniku, czy chociaż by w pasku wyszukiwania youtube, w tym artykule zajmiemy sie widoczną stroną działania takich formularzy.</h3>
@@ -80,27 +80,88 @@
         <div class="contents">
           <p class="actual-content" id="no-style">Spis treści</p>
           <ul>
-            <li><a href="#what-is"> Po co nam formularze</a></li>
+            <li><a href="#what-is">Po co nam formularze</a></li>
             <li><a href="#why">Podstawowe znaczniki</a></li>
             <li><a href="#where">CSS i znacznik label</a></li>
             <li><a href="#basics">Bezpieczeństwo formularzy</a></li>
           </ul>
         </div>
-        <p class="headings"></p>
+        <p class="headings">Po co nam formualarze</p>
         <p id="what-is" class="actual-content">
-        
+        Formularze są niezwykle potrzebnym elementem html, pozwalają na przepływ informacji między użytkownikiem, a serwerem (tu omówimy tylko frontend). Przykłady formularza to chociaż by 
+        miejsce w którym wybierasz płatności w sklepie internetowym, czy opcje odpowiedzi podczas testu online. HTML mówi tylko jaki typ formularza (inputu) ma być widoczny na stronie 
+        i w jaki sposób ma nim zarządzać przeglądarka (moment wysyłania danych itp.), a css określa wygląd formularza.
         </p>
       
 <h4 class="headings"  id="why">
- 
+ Podstawowe znaczniki
 </h4>
 <p class="actual-content">
 
 </p>
-<h5 class="headings" id="where"></h5>
-<p class="actual-content"></p>
-  <h6 class="headings" id="basics"></h6>
-  <p class="actual-content"></p>
+<ul class="content-list">
+  <li>&lt;input type=&quot;button&quot;&gt; Zazwyczaj stosowane do wyłapywania kliknięcia w JavaScripcie, ale mogą być programowane do wykonywnia wielu innych zadań</li>
+  <li>&lt;input type=&quot;checkbox&quot;&gt; Domyślnie renderowane jako pola, które są zaznaczane po aktywacji</li>
+  <li>&lt;input type=&quot;color&quot;&gt; zapewnia element interfejsu użytkownika, który pozwala określić kolor za pomocą wizualnego interfejsu próbnika kolorów lub poprzez wprowadzenie koloru w polu tekstowym w #rrggbb.</li>
+  <li>&lt;input type=&quot;date&quot;&gt; Pozwalają wprowadzać czas (dzień miesiąc rok)</li>
+  <li>&lt;input type=&quot;datetime-local&quot;&gt; Pozwalają wprowadzać czas (dzień miesiąc rok i godzine)</li>
+  <li>&lt;input type=&quot;email&quot;&gt; Pozwala wprowadzać e-mail. Sprawdza jego poprawność (np czy zawiera @)</li>
+  <li>&lt;input type=&quot;file&quot;&gt; Pozwala przesyłać pliki do serwera, trzeba pamiętać o atrybucie post (bezpieczeństwo).</li>
+  <li>&lt;input type=&quot;hidden&quot;&gt; Stwarza ukryty input (Może być wykorzystywany do celów bezpieczeństwa)</li>
+  <li>&lt;input type=&quot;image&quot;&gt; Pozwala przesyłać zdjęcia, limituje pliki do konkretnych formatów</li>
+  <li>&lt;input type=&quot;month&quot;&gt; Pokazuje kalendarz</li>
+  <li>&lt;input type=&quot;number&quot;&gt; Pozwala wybrać numer</li>
+  <li>&lt;input type=&quot;password&quot;&gt; Input na hasło, trzeba pamiętać o metodzie post</li>
+  <li>&lt;input type=&quot;radio&quot;&gt; Są zwykle używane w grupach — zbiorach przycisków opcji opisujących zestaw powiązanych inputów.</li>
+  <li>&lt;input type=&quot;range&quot;&gt; Pozwala wybrać zakres</li>
+  <li>&lt;input type=&quot;reset&quot;&gt; Input resetujący formularz</li>
+  <li>&lt;input type=&quot;search&quot;&gt; Służy do wyszukiwania elementów (np produktów na stronie internetowej)</li>
+  <li>&lt;input type=&quot;submit&quot;&gt; Zatwierdza wybrany formularz</li>
+  <li>&lt;input type=&quot;tel&quot;&gt; Pozwala wprowadzić telefon</li>
+  <li>&lt;input type=&quot;text&quot;&gt; Pole tekstowe</li>
+  <li>&lt;input type=&quot;time&quot;&gt; Pozwala wprowadzić czas (godzine, minutę)</li>
+  <li>&lt;input type=&quot;url&quot;&gt; Pozwala wprowadzić link</li>
+  <li>&lt;input type=&quot;week&quot;&gt; Pozwla wybrać tydzień</li>
+</ul>
+<h5 class="headings" id="where">CSS i znacznik label</h5>
+<p class="actual-content">
+  Cechą inputów jest to, że każda przeglądarka, czasem nawet ta sama przeglądarka w zależności od urządzenia, wyświetla je inaczej. Tutaj z pomocą przychodzi CSS.
+  Dla inputów ważny jest jeden sposób selekcji znaczników, a chodzi o ten:
+</p>
+<pre class="lang-html"><code>&lt;form method=&quot;post&quot;&gt; &lt;!--wszystkie inputy powinny być umieszczane w znacnziku form --&gt;
+  &lt;input type=&quot;text&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt; 
+  &lt;input type=&quot;datetime-local&quot;&gt; 
+&lt;/form&gt;</code></pre>
+<pre class="lang-css"><code>input[type=text]{ /*oznacza to wybierz wszystkie inputy w których type=text*/
+ background-color: red;
+ color:blue;
+}
+</code></pre>
+<p class="actual-content">Efekt:</p>
+<img src="../Obrazy/Formularze/input-effect.png" alt="input styling effect" class="img-content">
+<p class="actual-content">Aby ułatwić użytkownikowi korzystanie z formualarza, możemy umieścić input w 
+  znacnziku &lt;label&gt; który sprawi że miejsca powodujące kliknięcie inputu, zostana połączone z powierzchinią znacznika label.<br> Przykładowe użycie:</p>
+<pre class="lang-html"><code>&lt;form method=&quot;post&quot;&gt;
+  &lt;input type=&quot;text&quot;&gt;
+  &lt;label&gt; &lt;input type=&quot;checkbox&quot;&gt; po kliknięciu tego tekstu checkbox r&oacute;wnież się zaznaczy &lt;/label&gt;
+  &lt;input type=&quot;datetime-local&quot;&gt; 
+&lt;/form&gt;
+</code></pre>
+<pre class="lang-css"><code>label{
+  color: #d3d3d3; /*zmieniamy kolor textu w labelu dla lepszej czytelności*/
+}</code></pre>
+<p class="actual-content">A oto efekt</p>
+
+
+
+<img src="../Obrazy/Formularze/input-effec-label.png" alt="input in label" class="img-content">
+
+  <h6 class="headings" id="basics">Bezpieczeństwo formularzy</h6>
+  <p class="actual-content">Zapewnienie bezpieczeństwa formularzy używając samego html nie jest do końca możliwe, ale możemy wykonać pewne kroki, które to bezpieczeństwo podniosą. Są to między innymi: ustawianie metody post zamiast get w znaczniku form. 
+    Dzięki temu żądania nie będą przekazywane przez url (np. hasło nie wypisze się w pasku adresu), tylko będą wysyłane przez HTTP. Warto wykorzystać też wbudowane atrybuty 
+    walidacji HTML5, takie jak required, min, max, pattern, aby zapewnić, że dane wprowadzone przez użytkownika są w prawidłowym formacie.
+  </p>
 <p class="actual-content">
 </p>
 <div id="button-next">

@@ -57,8 +57,30 @@ var funFactDictionary = {
   "#HTML4":
     "Używając znacznika <script> możemy wykonać na stronie skrypt w różnych językach w zależności od przeglądarki!",
   "#CSS3":
-    "Możesz stworzyć zmienną pisząc jej nazwę po dwóch myślnikach np. --bg-color: black, aby jej użyć wpisujesz var(--bg-color)",
-};
+    "Możesz stworzyć zmienną pisząc jej nazwę po dwóch myślnikach np. --bg-color: black, aby jej użyć wpisujesz var(--bg-color).",
+    '#CSS4':
+    "W display grid możesz wykorzystać funkcję reapeat(), aby powtórzyć dany schemat siatki.",
+    '#HTML5':
+    "Możesz użyć metody post w znaczniku <input>, aby wpisywane elementy, nie wyświetlały się w adresie URL.",
+    '#CSS5':
+    "Gdy ustawiasz wielkość czcionki użyj funkcji clamp(minimalna, preferowana, maksymalna) która automatycznie zmienia wielkość czcionki.",
+    '#CSS6':
+    "Responywność to nie tylko dopasowanie do wielkości urządzenia, ale także do jakości internetu i wieku urządzenia.",
+    '#CSS7':
+    "Użyj funcji calc(a-b) aby łatwo dokonywać przeliczeń na jednostkach i ustawiać wynik jako wartość np: calc(10vw-23px).",
+    '#CSS8':
+    "Używanie box-sizing: border-box; też jest sposobem na ulepszenie responsywności strony!",
+    '#HTML6':
+    "Aby dołączyć skrypt do dokumentu HTML musisz użyć znacznika <script>",
+    '#HTML7':
+    "Nie powinno się zapisywać znaków takich jak < > itp. w tekście naszej strony, zamiast tego powinniśmy użyć encji.",
+    '#HTML8':
+    "90% stron internetowych jest bazowanych na HTML5 DOCTYPE",
+    '#HTML9':
+    "HTML nie jest case sensitive, nie zwraca uwagi na duże i małe litery.",
+    '#CSS9':
+    "Właściwość clip: działa tylko elementach pozycjonowanych absolutnie"
+  };
 //refresh funfuct if button clicked
 const refresh = document.querySelector("#refresh-image");
 refresh.addEventListener("click", () => {

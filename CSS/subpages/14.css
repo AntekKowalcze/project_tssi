@@ -1,0 +1,41 @@
+.content-list li{
+  list-style: circle;
+  margin-left: 4vw;
+  margin-bottom: 1.5em;
+}
+.img-content{
+  width: 50vw !important;
+  margin-top: 3em;
+}
+
+@media (min-width: 770px){
+ 
+  .content-list{
+    font-size: 1.3rem;
+    margin-right: 5vw;
+  }
+  .img-content{
+    width: 60vw !important;
+  }
+ 
+}
+@media (max-width: 769px){
+
+  .content-list{
+    margin-right: 5vw;
+    font-size: 4vw
+  }
+  .img-content{
+    width: 80vw !important;
+  }
+ 
+}
+
+
+@media (min-width: 1200px){
+ 
+  .content-list{
+    font-size: 1.5rem;
+  }
+
+}
